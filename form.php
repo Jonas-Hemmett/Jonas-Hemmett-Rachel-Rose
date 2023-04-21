@@ -12,9 +12,12 @@ $firstName = '';
 $lastName = '';
 $email = '';
 $gender = '';
-$readComic = 1;
-$seenTV = 0;
-$watchedMovie = 0;
+$drCoffin = 1;
+$captainSkunkbeard = 0;
+$theMysteryMachine = 0;
+$professorPericles = 0;
+$theBlackKnight = 0;
+$scrappyDoo = 0;
 $fav = '';
 $comment = '';
 
@@ -42,9 +45,12 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $email = getData('txtEmail');
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     $gender = getData('radGender');
-    $readComic = (int) getData('chkReadComic');
-    $seenTV = (int) getData('chkSeenTV');
-    $watchedMovie = (int) getData('chkWatchedMovie');
+    $drCoffin = (int) getData('chkdrCoffin');
+    $captainSkunkbeard = (int) getData('chkCaptainSkunkbeard');
+    $theMysteryMachine = (int) getData('theMysteryMachine');
+    $professorPericles = (int) getData('chkProfessorPericles');
+    $theBlackKnight = (int) getData('chkTheBlackKnight');
+    $scrappyDoo = (int) getData('chkscrappyDoo');
     $fav = getData('lstFav');
     $comment = getData('txtComment');
 
@@ -92,14 +98,23 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
    
     $totalChecked = 0;
 
-    if ($readComic != 1) $readComic = 0;
-    $totalChecked += $readComic;
+    if ($drCoffin != 1) $drCoffin = 0;
+    $totalChecked += $drCoffin;
 
-    if ($seenTV != 1) $seenTV = 0;
-    $totalChecked += $seenTV;
+    if ($captainSkunkbeard != 1) $captainSkunkbeard = 0;
+    $totalChecked += $captainSkunkbeard;
 
-    if ($seenTV != 1) $watchedMovie  = 0;
-    $watchedMovie  += $watchedMovie;
+    if ($theMysteryMachine != 1) $theMysteryMachine  = 0;
+    $totalChecked  += $theMysteryMachine;
+
+    if ($professorPericles != 1) $professorPericles  = 0;
+    $totalChecked  += $professorPericles;
+
+    if ($theBlackKnight != 1) $theBlackKnight  = 0;
+    $totalChecked  += $theBlackKnight;
+    
+    if ($scrappyDoo != 1) $scrappyDoo  = 0;
+    $totalChecked  += $scrappyDoo;
 
     if($totalChecked == 0){
         $errorMessege .= '<p class="mistake">Please read at least one comic before completing the form.</p>';
@@ -131,10 +146,11 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
     if($dataIsGood){
         $sql = 'INSERT INTO tblGarfieldSurvery
-        (fldFirstName, fldLastName, fldEmail, fldGender, fldReadComic, fldSeenTV, fldWatchedMovie, fldFav, fldComments)';
+        (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldFav, fldComments)';
         $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-        $data = array($firstName, $lastName, $email, $gender, $readComic, $seenTV, $watchedMovie, $fav, $fav);
+        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $scrappyDoo, $fav, $fav);
 
         try{
             $statement = $pdo->prepare($sql);
@@ -204,18 +220,30 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                         </fieldset>
 
                         <fieldset>
-                            <legend><strong>Garfield Questions</strong></legend>
+                            <legend><strong>Select your favorite Scooby Doo Villians</strong></legend>
                         <p>
-                            <input type="checkbox" name="chkReadComic" id="chkReadComic" value="1" required <?php if($readComic) print 'checked';?>>
-                            <label for="chkReadComic">Have you read a Garfield comic before?</label>
+                            <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" required <?php if($drCoffin) print 'checked';?>>
+                            <label for="chkDrCoffin">The Ghost of Dr. Coffin</label>
                         </p>
                         <p>
-                            <input type="checkbox" name="chkSeenTV" id="chkSeenTV" value="1" <?php if($seenTV) print 'checked';?>>
-                            <label for="chkSeenTV">Have you seen Garfield on TV?</label>
+                            <input type="checkbox" name="chkCaptainSkunkbeard" id="chkCaptainSkunkbeard" value="1" <?php if($captainSkunkbeard) print 'checked';?>>
+                            <label for="chkCaptainSkunkbeard">Captain Skunkbeard</label>
                         </p>
                         <p>
-                            <input type="checkbox" name="chkWatchedMovie" id="chkWatchedMovie" value="1" <?php if($watchedMovie) print 'checked';?>>
-                            <label for="chkWatchedMovie">Have you watched a Garfield movie?</label>
+                            <input type="checkbox" name="chkTheMysteryMachine" id="chkTheMysteryMachine" value="1" <?php if($theMysteryMachine) print 'checked';?>>
+                            <label for="chkTheMysteryMachine">The Mystery Machine</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="chkProfessorPericles" id="chkProfessorPericles" value="1" <?php if($professorPericles) print 'checked';?>>
+                            <label for="chkProfessorPericles">Professor Pericles</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
+                            <label for="chkTheBlackKnight">The Black Knight</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="chkScrappyDoo" id="chkScrappyDoo" value="1" <?php if($scrappyDoo) print 'checked';?>>
+                            <label for="chkScrappyDoo">Scrappy Doo</label>
                         </p>
                         <p class="lstplayblock">
                             <label for="lstFav">What is your favorite Garfield Comic from the <a href=detail.php>list</a>?</label>
