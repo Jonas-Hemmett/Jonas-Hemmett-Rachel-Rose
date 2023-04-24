@@ -167,123 +167,123 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 }
 ?>
 
-            <main>
-                <section>
-                    <h2>Please fill out the form below</h2>
-                </section>
-            <section>
-            <!--php -->
-                <?php
-                print $messege;
-                print $errorMessege;
-                print '<p>Post Array:</p><pre>';
-                print_r($_POST);
-                print'</pre>';
-                ?>
-            <!--php -->
-            </section>
-            <section>
-                <form action="#" method="POST">
-                    <fieldset class="lstplayblock">
-                            <legend><strong>Contact Infromation</strong></legend>
-                        <p>
-                            <label for="txtFirstName">First Name:</label>
-                            <input type="text" name="txtFirstName" id="txtFirstName" required value="<?php print $firstName; ?>">
-                        </p>
-                        <p>
-                            <label for="txtLastName">Last Name:</label>
-                            <input type="text" name="txtLastName" id="txtLastName" required value="<?php print $lastName; ?>">
-                        </p>
-                        <p>
-                            <label for="txtEmail">Email Address:</label>
-                            <input type="email" name="txtEmail" id="txtEmail" required value="<?php print $email; ?>">
-                        </p>
-                        </fieldset>
+<main>
+    <section class="flexwide">
+        <h2>Please fill out the form below</h2>
+    </section>
+    <section class="flexwide">
+    <!--php -->
+        <?php
+        print $messege;
+        print $errorMessege;
+        print '<p>Post Array:</p><pre>';
+        print_r($_POST);
+        print'</pre>';
+        ?>
+    <!--php -->
+    </section class="flexwide">
+    <section>
+        <form action="#" method="POST">
+            <fieldset class="lstplayblock">
+                    <legend><strong>Contact Infromation</strong></legend>
+                <p>
+                    <label for="txtFirstName">First Name:</label>
+                    <input type="text" name="txtFirstName" id="txtFirstName" required value="<?php print $firstName; ?>">
+                </p>
+                <p>
+                    <label for="txtLastName">Last Name:</label>
+                    <input type="text" name="txtLastName" id="txtLastName" required value="<?php print $lastName; ?>">
+                </p>
+                <p>
+                    <label for="txtEmail">Email Address:</label>
+                    <input type="email" name="txtEmail" id="txtEmail" required value="<?php print $email; ?>">
+                </p>
+                </fieldset>
 
-                        <fieldset>    
-                            <legend><strong>Gender</strong></legend>
-                            <p>
-                                <input type="radio" id="radMale" name="radGender" value="Male"  <?php if($gender == "Male") print 'checked'?>>
-                                <label for="radMale">Male</label>
-                                
-                                
-                            </p>
-                            <p class="FBRadio">
-                                <input type="radio" id="radFemale" name="radGender" value="Female"  <?php if($gender == "Female") print 'checked'?>>
-                                <label for="radFemale">Female</label>
-                                
-                            </p>
-                            <p>
-                                <input type="radio" id="radOther" name="radGender" value="Other"  <?php if($gender == "Other") print 'checked'?>>
-                                <label for="radOther">Other</label>
-                            </p>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend><strong>Select your favorite Scooby Doo Villians</strong></legend>
-                        <p>
-                            <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" required <?php if($drCoffin) print 'checked';?>>
-                            <label for="chkDrCoffin">The Ghost of Dr. Coffin</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="chkCaptainSkunkbeard" id="chkCaptainSkunkbeard" value="1" <?php if($captainSkunkbeard) print 'checked';?>>
-                            <label for="chkCaptainSkunkbeard">Captain Skunkbeard</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="chkTheMysteryMachine" id="chkTheMysteryMachine" value="1" <?php if($theMysteryMachine) print 'checked';?>>
-                            <label for="chkTheMysteryMachine">The Mystery Machine</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="chkProfessorPericles" id="chkProfessorPericles" value="1" <?php if($professorPericles) print 'checked';?>>
-                            <label for="chkProfessorPericles">Professor Pericles</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
-                            <label for="chkTheBlackKnight">The Black Knight</label>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="chkScrappyDoo" id="chkScrappyDoo" value="1" <?php if($scrappyDoo) print 'checked';?>>
-                            <label for="chkScrappyDoo">Scrappy Doo</label>
-                        </p>
-                        <p class="lstplayblock">
-                            <label for="lstFav">What is your favorite Garfield Comic from the <a href=detail.php>list</a>?</label>
-                            <select id="lstFav" name="lstFav">
-                                
-                                <option
-                                    <?php if($fav == "lstComic1") print 'selected'; ?> value="lstComic1">Comic #1
-                                </option>
-                                <option
-                                    <?php if($fav == "lstComic2") print 'selected'; ?> value="lstComic2">Comic #2
-                                </option>
-                                <option
-                                    <?php if($fav == "lstComic3") print 'selected'; ?> value="lstComic3">Comic #3
-                                </option>
-                                <option
-                                    <?php if($fav == "lstComicOther") print 'selected'; ?> value="lstComicOther">Not on list
-                                </option>
-                               
-                                
-                            </select>
-                        </p>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend><strong>Comments</strong></legend>
-                        <p class="lstplayblock">
-                            <label for="txtComment">Comments</label>
-                            <textarea name="txtComment" id="txtComment" rows="2" cols="20"><?php print $comment ?></textarea>
-                        </p>
-                    </fieldset>
-                    <fieldset> 
-                        <legend><strong>Submit Form</strong></legend>  
-                        <p>
-                            <input type="submit">
-                        </p>
-                    </fieldset>
-                </form>
-            </section>
+                <fieldset>    
+                    <legend><strong>Gender</strong></legend>
+                    <p>
+                        <input type="radio" id="radMale" name="radGender" value="Male"  <?php if($gender == "Male") print 'checked'?>>
+                        <label for="radMale">Male</label>
                         
-            </main>
+                        
+                    </p>
+                    <p class="FBRadio">
+                        <input type="radio" id="radFemale" name="radGender" value="Female"  <?php if($gender == "Female") print 'checked'?>>
+                        <label for="radFemale">Female</label>
+                        
+                    </p>
+                    <p>
+                        <input type="radio" id="radOther" name="radGender" value="Other"  <?php if($gender == "Other") print 'checked'?>>
+                        <label for="radOther">Other</label>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend><strong>Select your favorite Scooby Doo Villians</strong></legend>
+                <p>
+                    <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" required <?php if($drCoffin) print 'checked';?>>
+                    <label for="chkDrCoffin">The Ghost of Dr. Coffin</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="chkCaptainSkunkbeard" id="chkCaptainSkunkbeard" value="1" <?php if($captainSkunkbeard) print 'checked';?>>
+                    <label for="chkCaptainSkunkbeard">Captain Skunkbeard</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="chkTheMysteryMachine" id="chkTheMysteryMachine" value="1" <?php if($theMysteryMachine) print 'checked';?>>
+                    <label for="chkTheMysteryMachine">The Mystery Machine</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="chkProfessorPericles" id="chkProfessorPericles" value="1" <?php if($professorPericles) print 'checked';?>>
+                    <label for="chkProfessorPericles">Professor Pericles</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
+                    <label for="chkTheBlackKnight">The Black Knight</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="chkScrappyDoo" id="chkScrappyDoo" value="1" <?php if($scrappyDoo) print 'checked';?>>
+                    <label for="chkScrappyDoo">Scrappy Doo</label>
+                </p>
+                <p class="lstplayblock">
+                    <label for="lstFav">Place Holder<a href=detail.php>list</a>?</label>
+                    <select id="lstFav" name="lstFav">
+                        
+                        <option
+                            <?php if($fav == "lstComic1") print 'selected'; ?> value="lstComic1">Comic #1
+                        </option>
+                        <option
+                            <?php if($fav == "lstComic2") print 'selected'; ?> value="lstComic2">Comic #2
+                        </option>
+                        <option
+                            <?php if($fav == "lstComic3") print 'selected'; ?> value="lstComic3">Comic #3
+                        </option>
+                        <option
+                            <?php if($fav == "lstComicOther") print 'selected'; ?> value="lstComicOther">Not on list
+                        </option>
+                        
+                        
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend><strong>Comments</strong></legend>
+                <p class="lstplayblock">
+                    <label for="txtComment">Comments</label>
+                    <textarea name="txtComment" id="txtComment" rows="2" cols="20"><?php print $comment ?></textarea>
+                </p>
+            </fieldset>
+            <fieldset> 
+                <legend><strong>Submit Form</strong></legend>  
+                <p>
+                    <input type="submit">
+                </p>
+            </fieldset>
+        </form>
+    </section>
+            
+</main>
 <?php 
 include "footer.php";
 ?>
