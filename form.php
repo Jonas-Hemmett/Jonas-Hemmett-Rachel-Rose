@@ -2,7 +2,8 @@
 include 'top.php';
 
 
-$favOptions = array('lstComic1','lstComic2','lstComic3','lstComicOther');
+$evilOptions = array('mostEvil1', 'mostEvil2', 'mostEvil3' ,'mostEvil4','mostEvil5', 'mostEvil6');
+$mysteryGangMemberOptions= array ('Scooby', 'Shaggy', 'Velma', 'Daphne', 'Fred');
 
 $dataIsGood = false;
 $errorMessege = '';
@@ -18,7 +19,8 @@ $theMysteryMachine = 0;
 $professorPericles = 0;
 $theBlackKnight = 0;
 $scrappyDoo = 0;
-$fav = '';
+$mostEvil = '';
+$mysteryGangMember = '';
 $comment = '';
 
 function getData($field) {
@@ -51,7 +53,8 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $professorPericles = (int) getData('chkProfessorPericles');
     $theBlackKnight = (int) getData('chkTheBlackKnight');
     $scrappyDoo = (int) getData('chkscrappyDoo');
-    $fav = getData('lstFav');
+    $mostEvil = getData('mostEvil');
+    $mysteryGangMember = getData('mysteryGangMember');
     $comment = getData('txtComment');
 
 
@@ -117,17 +120,24 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $totalChecked  += $scrappyDoo;
 
     if($totalChecked == 0){
-        $errorMessege .= '<p class="mistake">Please read at least one comic before completing the form.</p>';
+        $errorMessege .= '<p class="mistake">Please rchoose at least one favorite before completing the form.</p>';
         $dataIsGood = false;
     }
     
     print PHP_EOL . ' <!--5-->' . PHP_EOL;
 
-    if($fav == ''){
-        $errorMessege .= '<p class="mistake">Please choose your favorite comic.</p>';
+    if($mostEvil == ''){
+        $errorMessege .= '<p class="mistake">Please choose most evil villian.</p>';
         $dataIsGood = false;
-    } elseif (!in_array($fav, $favOptions)){
-        $errorMessege .= '<p class="mistake">Please choose your favorite comic</p>';
+    } elseif (!in_array($mostEvil, $evilOptions)){
+        $errorMessege .= '<p class="mistake">Please choose your most evil villian</p>';
+        $dataIsGood = false;
+    }
+    if($mysteryGangMember == ''){
+        $errorMessege .= '<p class="mistake">Please choose a Mystery Gang Member.</p>';
+        $dataIsGood = false;
+    } elseif (!in_array($mysteryGangMember, $mysteryGangMemberOptions)){
+        $errorMessege .= '<p class="mistake">Please choose a Mystery Gang Member.</p>';
         $dataIsGood = false;
     }
 
@@ -147,10 +157,10 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     if($dataIsGood){
         $sql = 'INSERT INTO tblGarfieldSurvery
         (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
-        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldFav, fldComments)';
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldEvil, fldComments)';
         $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $scrappyDoo, $fav, $fav);
+        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $scrappyDoo, $mostEvil, $mysteryGangmember);
 
         try{
             $statement = $pdo->prepare($sql);
@@ -246,23 +256,51 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkScrappyDoo">Scrappy Doo</label>
                 </p>
                 <p class="lstplayblock">
-                    <label for="lstFav">Place Holder<a href=detail.php>list</a>?</label>
-                    <select id="lstFav" name="lstFav">
+                    <label for="mostEvil">Most Evil Villian<a href=detail.php>list</a>?</label>
+                    <select id="mostEvil" name="mostEvil">                      
+                        <option
+                            <?php if($mostEvil == "mostEvil1") print 'selected'; ?> value="mostEvil1">The Ghost of Dr. Coffin
+                        </option>
+                        <option
+                            <?php if($mostEvil == "mostEvil2") print 'selected'; ?> value="mostEvil2">Captain Skunkbeard
+                        </option>
+                        <option
+                            <?php if($mostEvil == "mostEvil3") print 'selected'; ?> value="mostEvil3">The Mystery Machine
+                        </option>
+                        <option
+                            <?php if($mostEvil == "mostEvil4") print 'selected'; ?> value="mostEvil4">Professor Pericles
+                        </option>
+                        <option
+                            <?php if($mostEvil == "mostEvil5") print 'selected'; ?> value="mostEvil5">The Black Knight
+                        </option>
+                        <option
+                            <?php if($mostEvil == "mostEvil6") print 'selected'; ?> value="mostEvil6">Scrappy Doo
+                        </option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                    <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
+                    <p class="lstplayblock">
+                    <label for="mysteryGangMember">Mystery Gang Members<a href=detail.php>list</a>?</label>
+                    <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option
-                            <?php if($fav == "lstComic1") print 'selected'; ?> value="lstComic1">Comic #1
+                            <?php if($mysteryGangMember == "Scooby") print 'selected'; ?> value="Scooby">The Ghost of Dr. Coffin
                         </option>
                         <option
-                            <?php if($fav == "lstComic2") print 'selected'; ?> value="lstComic2">Comic #2
+                            <?php if($mysteryGangMember == "Shaggy") print 'selected'; ?> value="Shaggy">Captain Skunkbeard
                         </option>
                         <option
-                            <?php if($fav == "lstComic3") print 'selected'; ?> value="lstComic3">Comic #3
+                            <?php if($mysteryGangMember == "Velma") print 'selected'; ?> value="Velma">The Mystery Machine
                         </option>
                         <option
-                            <?php if($fav == "lstComicOther") print 'selected'; ?> value="lstComicOther">Not on list
+                            <?php if($mysteryGangMember == "Daphne") print 'selected'; ?> value="Daphne">Professor Pericles
                         </option>
-                        
-                        
+                        <option
+                            <?php if($mysteryGangMember == "fred") print 'selected'; ?> value="Fred">The Black Knight
+                        </option>
                     </select>
                 </p>
             </fieldset>
