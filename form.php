@@ -256,7 +256,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkScrappyDoo">Scrappy Doo</label>
                 </p>
                 <p class="lstplayblock">
-                    <label for="mostEvil">Most Evil Villian<a href=detail.php>list</a>?</label>
+                    <label for="mostEvil">Most Evil Villian?<a href=detail.php> list for refrence</a></label>
                     <select id="mostEvil" name="mostEvil">                      
                         <option
                             <?php if($mostEvil == "mostEvil1") print 'selected'; ?> value="mostEvil1">The Ghost of Dr. Coffin
@@ -283,23 +283,23 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Mystery Gang Members<a href=detail.php>list</a>?</label>
+                    <label for="mysteryGangMember">Fav Mystery Gang Member? <a href=detail.php>list for refrence</a></label>
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option
-                            <?php if($mysteryGangMember == "Scooby") print 'selected'; ?> value="Scooby">The Ghost of Dr. Coffin
+                            <?php if($mysteryGangMember == "Scooby") print 'selected'; ?> value="Scooby">Scooby
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Shaggy") print 'selected'; ?> value="Shaggy">Captain Skunkbeard
+                            <?php if($mysteryGangMember == "Shaggy") print 'selected'; ?> value="Shaggy">Shaggy
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Velma") print 'selected'; ?> value="Velma">The Mystery Machine
+                            <?php if($mysteryGangMember == "Velma") print 'selected'; ?> value="Velma">Velma
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Daphne") print 'selected'; ?> value="Daphne">Professor Pericles
+                            <?php if($mysteryGangMember == "Daphne") print 'selected'; ?> value="Daphne">Daphne
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "fred") print 'selected'; ?> value="Fred">The Black Knight
+                            <?php if($mysteryGangMember == "Fred") print 'selected'; ?> value="Fred">Fred
                         </option>
                     </select>
                 </p>
