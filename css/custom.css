@@ -1,0 +1,292 @@
+:root {
+    --1: rgb(198, 105, 59);
+    --2: rgb(89,189,212);
+    --3: rgb(193, 30, 149);
+    --4: rgb(219,226,58);
+    --b: rgba(0,0,0,1);
+    --w:rgba(255,255,255,1);
+    --c:rgba(255,255,255,0);
+}
+
+
+@font-face {
+    font-family:Spooky;
+    src: url("../resources/Spooky.ttf");
+}
+
+html {
+    animation-name: shake;
+    animation-duration: 1200s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url("../resources/background-top.png"),url("../resources/background-bottom.png"),url("../resources/background-texture.png"),url("../resources/flower.png"),url("../resources/flower.png");
+    background-color: var(--w);
+    background-repeat: repeat-x,repeat-x,repeat,repeat-x,repeat-x;
+    background-position: top center,bottom center,0% 0%,top center,bottom center;
+    background-size: 0.2%,0.2%,25%,4%,4%;
+    min-height: 100%;   
+}
+
+.footer {
+    margin-bottom: 5%;
+}
+@keyframes shake {
+    0% {background-position: top center, bottom center, 0% 0%, 0% top, 0% bottom ;}
+    100% {background-position: top center, bottom center, 0% 12000%, 1200% 0%, -1200% bottom;}
+}
+
+h3 {
+    animation-name: h3fade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    font-size:200%;
+    background-color: var(--2);
+    border:var(--1);
+    border-width: 10px;
+    text-align: center;
+    color: var(--4);
+    font-family: spooky, fantasy;
+}
+
+@keyframes h3fade {
+    0% {background-color: var(--4); color: var(--2);}
+    100% {background-color: var(--2); color: var(--4);}
+}
+
+h2 {
+    animation-name: h2fade;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    color: var(--3);
+    font-size:200%;
+    font-family: spooky, fantasy;
+    text-align: center;  
+    margin-top: 0%;
+}
+
+
+@keyframes h2fade {
+    0% {color: var(--c); font-size: 0%;}
+    50% {color: var(--1);}
+    100% {color: var(--3); font-size: 200%;}
+  }
+
+h1 {
+    animation-name: h1fade;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    color: var(--3);
+    font-size:400%;
+    font-family: spooky, fantasy;
+    margin-bottom: 0%;
+
+}
+
+
+@keyframes h1fade {
+    0% {color: var(--c); font-size: 0%;}
+    50% {color: var(--1);}
+    100% {color: var(--3); font-size: 400%;}
+  }
+
+ .centerfig2:hover, .centerfig:hover {
+    transform: scale(1.05);
+}
+
+p {
+    text-align: justify;
+    font-family: Arial;
+}
+
+figcaption {
+    font-size:xx-small    
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    text-align: center;
+}
+
+fieldset p{
+    text-indent: 0%;
+  }
+
+
+ol,ul,table {
+    padding-left: 1%;
+    margin-left: 1%
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border:thin dashed var(--o);
+    padding: 20%;
+}
+
+
+li:nth-child(even),tr:nth-child(even) {
+    background-color: rgba(200,200,200,0.5)
+}
+li:nth-child(odd),tr:nth-child(odd) {
+    background-color: rgba(220, 220, 220,0.5)
+}
+
+td{
+    border:thin solid var(--b)
+}
+
+th{
+    border:thin dashed var(--o)
+}
+
+
+/*Insert Start*/
+
+/* nav start
+
+nav a:link {
+   font-size: x-large; 
+   text-decoration: none;
+}
+
+
+
+nav {
+    text-align: center;
+    margin:auto;
+
+    
+}
+
+nav {
+    display: flex;
+}
+
+nav a{
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    flex: 1 1 100%
+}
+
+nav end*/
+
+
+
+
+/*Insert End */
+
+/*Various Fixes Start */
+.pa1 {
+    font-size:large;
+}
+
+.pa3 {
+    color: rgba(255,164,0,1)
+}
+/*Various Fixes End*/
+
+input[type=submit] {
+    background-color: var(--o); 
+    width: 15%;
+    }
+
+input[type=submit]:hover {
+        background-color: var(--b); 
+        color: var(--o); 
+        }
+
+input[type=radio],input[type=checkbox],input[type=submit] {
+    cursor: pointer;
+    }         
+
+.displayblock label, .displayblock input, .displayblock select,.displayblock textarea{
+    display:block
+}
+
+
+/*FlexBox Start */
+
+main {
+    display:flex;
+    flex-wrap:wrap;
+    column-gap: 3%;
+}
+
+figure {
+    flex: 1 0 100%;
+}
+
+section {
+    flex: 1 1 48%; 
+}
+
+.flexwide {
+    flex: 0 0 100%
+}
+
+
+
+h1 {
+    flex: 0 0 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.form section{
+    flex: 0 0 100%;
+}
+
+
+/*FlexBox End */
+
+a {
+    color:rgb(17, 85, 204);
+    transition: color 200ms ease;
+}
+
+a:hover[href$=".php"] {
+    color: var(--b);
+    text-decoration: underline;
+  }
+
+
+
+
+ .comic{
+    width:75%;
+    height:auto;
+ }
+
+/*h1,h3,h3,p,table,ol,ul{
+padding-left:0.25rem;
+padding-right:0.25rem;
+}
+*/
+
+.activePage{
+    color:var(--b)}
+
+nav {
+    display:flex;
+    flex-wrap:wrap;
+    column-gap: 3%;
+}
+
+nav a {
+    animation-name: h3fade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    font-size:200%;
+    background-color: var(--2);
+    border:var(--1);
+    border-width: 10px;
+    text-align: center;
+    font-family: spooky, fantasy;
+    flex: 1 0 22%;
+}
