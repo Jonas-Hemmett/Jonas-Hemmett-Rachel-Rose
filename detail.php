@@ -3,13 +3,13 @@ include "top.php";
 ?>
             <main>
                 <section>
-                    <h2>Introduction</h2>
+                    <h3>Introduction</h3>
                     <p>As a long time fan of garfield It was by no means easy to rank my favorite comic strips; 
                         But I managed to do it. 
                         Listed below are my top three favorite comics of all time.</p>
                 </section>
                 <section>
-                    <h2>Comic #3</h2>
+                    <h3>Comic #3</h3>
                     <figure>
                         <img src="orange/comic-3.png" alt="Garfield Comic #3" class="comic">
                         <figcaption><cite>Davis</cite></figcaption>
@@ -22,7 +22,7 @@ include "top.php";
                 </section>
 
                 <section>
-                    <h2>Comic #2</h2>
+                    <h3>Comic #2</h3>
                     <figure>
                         <img src="orange/comic-2.png" alt="Garfield Comic #2" class="comic">
                         <figcaption><cite>Davis</cite></figcaption>
@@ -34,7 +34,7 @@ include "top.php";
                 </section>
 
                 <section>
-                    <h2>Comic #1</h2>
+                    <h3>Comic #1</h3>
                     <figure>
                         <img src="orange/comic-1.png" alt="Garfield Comic #1" class="comic">
                         <figcaption><cite>Davis</cite></figcaption>

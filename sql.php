@@ -3,7 +3,7 @@ include 'top.php'
 ?>
 <main>
 
-<h2>Lab 9<h2>
+<h3>Lab 9<h3>
     <pre>
     INSERT INTO tblGarfieldSurvery
         (pmkGarfieldSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldReadComic, fldSeenTV, fldWatchedMovie, fldFav, fldComments)

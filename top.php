@@ -9,14 +9,14 @@ $pathParts = pathinfo($phpSelf);
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>The History of Garfield</title>
-        <meta name="author" content="Jonas Hemmett">
-        <meta name="Jonas Hemmett's Site" content="My Garfield cs008 Site.">
-        <meta name="description" content="A brief history of the famed cartoon cat Garfield.">
+        <title>Scooby-Doo</title>
+        <meta name="author" content="Jonas Hemmett and Rachel Rose">
+        <meta name="Jonas Hemmett's Site" content="Scooby-Doo">
+        <meta name="description" content="Web Design Final">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/x-icon" href="orange/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 
         <link rel="stylesheet" 
         href="css/custom.css?version=<?php print time(); ?>" 

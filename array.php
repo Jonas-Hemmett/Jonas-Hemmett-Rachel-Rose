@@ -16,7 +16,7 @@ $GarfieldArrays=array(
 
 <main>
     <section>
-        <h2> Merchandise </h2>
+        <h3> Merchandise </h3>
         <p>The Garfield franchise has a wide variety of merchandise including.</p>
         <ul> 
             <li>Books</li>
@@ -30,7 +30,7 @@ $GarfieldArrays=array(
 
     </section>
     <section>
-        <h2>Garfield Compilation Books</h2>
+        <h3>Garfield Compilation Books</h3>
             <p>Since 1980 Garfield comics have been published in compilation books. Listed below are the first <?php print count($GarfieldArrays);?> books.<p>
         <table>
             <caption class="pa1">Compilations</caption>

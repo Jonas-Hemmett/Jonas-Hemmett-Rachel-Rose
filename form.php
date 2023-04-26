@@ -157,7 +157,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     if($dataIsGood){
         $sql = 'INSERT INTO tblGarfieldSurvery
         (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
-        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldEvil, fldMysteryGangMembers, fldComments)';
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldEvil, fldComments)';
         $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
         $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $scrappyDoo, $mostEvil, $mysteryGangmember);
@@ -165,7 +165,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         try{
             $statement = $pdo->prepare($sql);
             if($statement->execute($data)){
-                $messege .= '<h2>Thank You</h2>';
+                $messege .= '<h3>Thank You</h3>';
                 $messege .= '<p>Your information was successfully saved.</p>';
             } else {
                 $messege .= '<p>Record was Not successfully saved.</p>';
@@ -179,7 +179,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
 <main>
     <section class="flexwide">
-        <h2>Please fill out the form below</h2>
+        <h3>Please fill out the form below</h3>
     </section>
     <section class="flexwide">
     <!--php -->
@@ -256,7 +256,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkScrappyDoo">Scrappy Doo</label>
                 </p>
                 <p class="lstplayblock">
-                    <label for="mostEvil">Most Evil Villian: <a href=detail.php>list for reference</a></label>
+                    <label for="mostEvil">Most Evil Villian<a href=detail.php>list</a>?</label>
                     <select id="mostEvil" name="mostEvil">                      
                         <option
                             <?php if($mostEvil == "mostEvil1") print 'selected'; ?> value="mostEvil1">The Ghost of Dr. Coffin
@@ -283,23 +283,23 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Mystery Gang Members: <a href=detail.php>list for reference</a></label>
+                    <label for="mysteryGangMember">Mystery Gang Members<a href=detail.php>list</a>?</label>
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option
-                            <?php if($mysteryGangMember == "Scooby") print 'selected'; ?> value="Scooby">Scooby
+                            <?php if($mysteryGangMember == "Scooby") print 'selected'; ?> value="Scooby">The Ghost of Dr. Coffin
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Shaggy") print 'selected'; ?> value="Shaggy">Shaggy
+                            <?php if($mysteryGangMember == "Shaggy") print 'selected'; ?> value="Shaggy">Captain Skunkbeard
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Velma") print 'selected'; ?> value="Velma">Velma
+                            <?php if($mysteryGangMember == "Velma") print 'selected'; ?> value="Velma">The Mystery Machine
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "Daphne") print 'selected'; ?> value="Daphne">Daphne
+                            <?php if($mysteryGangMember == "Daphne") print 'selected'; ?> value="Daphne">Professor Pericles
                         </option>
                         <option
-                            <?php if($mysteryGangMember == "fred") print 'selected'; ?> value="Fred">Fred
+                            <?php if($mysteryGangMember == "fred") print 'selected'; ?> value="Fred">The Black Knight
                         </option>
                     </select>
                 </p>

@@ -4,26 +4,20 @@ include "top.php";
 
         <main>
             <section>
-                <h2>1</h2>
+                <h3>Overview</h3>
                     <p>
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.  
+                        Scooby-Doo is an animated series revolving around Mystery Inc and their adventures thwarting seemingly supernatural villains. Mystery Inc includes members Scoobert “Scooby-Doo” Doo, Shaggy Rogers, Fred Jones, Daphne Blake, and Velma Dinkly.
                     </p>
             </section>
             <section>
-                <h2>2</h2> 
+                <h3>A Typical Mystery</h3> 
                         <p>
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
-                        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.  
+                            After being notified of mysterious happenings, The gang of mystery solvers arrive to the scene in a lime green and cyan van called the Mystery Machine. The gang will interview locals then split up to search the nearby area for clues. After they figure out whats going on Fred, the leader of the group, builds a trap to catch the villain while Scooby and Shaggy lure the villain in. After catching the villain they take off the villains mask revealing his true identity. Finally they turn the culprit over to the police sticking around just long enough to celebrate before going on to solve another mystery.
                         </p>
 
             </section>
             <section class="flexwide">
-                <h2>3</h2>
+                <h3>3</h3>
                     <p>
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
@@ -60,7 +54,7 @@ include "top.php";
                     -->
             </section>
             <section>
-                <h2>4</h2>
+                <h3>4</h3>
                     <p>
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
@@ -70,7 +64,7 @@ include "top.php";
                     
             </section>
             <section>
-                <h2>5</h2>
+                <h3>5</h3>
                     <p>
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
                         Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
