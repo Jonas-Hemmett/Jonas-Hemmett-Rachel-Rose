@@ -10,7 +10,7 @@
         if ($pathParts['filename'] == "detail"){
             print 'activePage';
         }  
-        ?> " href=detail.php>2</a>
+        ?> " href=detail.php>Villains</a>
 
         <a class="<?php 
         if ($pathParts['filename'] == "array"){

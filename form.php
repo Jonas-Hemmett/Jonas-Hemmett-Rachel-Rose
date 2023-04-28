@@ -18,7 +18,6 @@ $captainSkunkbeard = 0;
 $theMysteryMachine = 0;
 $professorPericles = 0;
 $theBlackKnight = 0;
-$scrappyDoo = 0;
 $mostEvil = '';
 $mysteryGangMember = '';
 $comment = '';
@@ -52,7 +51,6 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $theMysteryMachine = (int) getData('theMysteryMachine');
     $professorPericles = (int) getData('chkProfessorPericles');
     $theBlackKnight = (int) getData('chkTheBlackKnight');
-    $scrappyDoo = (int) getData('chkscrappyDoo');
     $mostEvil = getData('mostEvil');
     $mysteryGangMember = getData('mysteryGangMember');
     $comment = getData('txtComment');
@@ -115,9 +113,6 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
     if ($theBlackKnight != 1) $theBlackKnight  = 0;
     $totalChecked  += $theBlackKnight;
-    
-    if ($scrappyDoo != 1) $scrappyDoo  = 0;
-    $totalChecked  += $scrappyDoo;
 
     if($totalChecked == 0){
         $errorMessege .= '<p class="mistake">Please rchoose at least one favorite before completing the form.</p>';
@@ -157,10 +152,10 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     if($dataIsGood){
         $sql = 'INSERT INTO tblGarfieldSurvery
         (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
-        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldScrappyDoo, fldEvil, fldComments)';
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldEvil, fldComments)';
         $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $scrappyDoo, $mostEvil, $mysteryGangmember);
+        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $mostEvil, $mysteryGangmember);
 
         try{
             $statement = $pdo->prepare($sql);
@@ -251,10 +246,6 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
                     <label for="chkTheBlackKnight">The Black Knight</label>
                 </p>
-                <p>
-                    <input type="checkbox" name="chkScrappyDoo" id="chkScrappyDoo" value="1" <?php if($scrappyDoo) print 'checked';?>>
-                    <label for="chkScrappyDoo">Scrappy Doo</label>
-                </p>
                 <p class="lstplayblock">
                     <label for="mostEvil">Most Evil Villian?<a href=detail.php> list for refrence</a></label>
                     <select id="mostEvil" name="mostEvil">                      
@@ -273,9 +264,6 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                         <option
                             <?php if($mostEvil == "mostEvil5") print 'selected'; ?> value="mostEvil5">The Black Knight
                         </option>
-                        <option
-                            <?php if($mostEvil == "mostEvil6") print 'selected'; ?> value="mostEvil6">Scrappy Doo
-                        </option>
                     </select>
                 </p>
             </fieldset>
@@ -283,7 +271,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Fav Mystery Gang Member? <a href=detail.php>list for refrence</a></label>
+                    <label for="mysteryGangMember">Favorite Mystery Gang Member? <a href=detail.php>list for refrence</a></label>
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option

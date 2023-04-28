@@ -1,53 +1,40 @@
 <?php 
 include "top.php";
 ?>
-            <main>
-                <section>
-                    <h3>Introduction</h3>
-                    <p>As a long time fan of garfield It was by no means easy to rank my favorite comic strips; 
-                        But I managed to do it. 
-                        Listed below are my top three favorite comics of all time.</p>
-                </section>
-                <section>
-                    <h3>Comic #3</h3>
-                    <figure>
-                        <img src="orange/comic-3.png" alt="Garfield Comic #3" class="comic">
-                        <figcaption><cite>Davis</cite></figcaption>
-                    </figure> 
-                    <br>
-                    <p>In this comic Garfield Garfield stuffs Nermal into a sugar bowl, 
-                        teaching him a lesson in humility. 
-                        I find the idea of a “humalty lesson” amusing and the tail sticking out of the bowl makes the comic even funnier. 
-                        I would say that this comic is my third favorite Garfield comic of all.</p>
-                </section>
+<main>
+    <section class="flexwide">
+        <h3>Villains</h3>
+        <p>
+            Scooby-Doo is famous for its seemingly supernatural villains, featuring a different one in almost every episode. Most of the villains are petty crinmials who disguise themselves as monsters to get away with their various crimes. Listed below are X of our favorites
+        </p>
+        <table>
 
-                <section>
-                    <h3>Comic #2</h3>
-                    <figure>
-                        <img src="orange/comic-2.png" alt="Garfield Comic #2" class="comic">
-                        <figcaption><cite>Davis</cite></figcaption>
-                    </figure>
-                    <p>I think that the simpiclty of this comic is part of what makes it so great. 
-                        Jon is seen jinxing his luck by celebrating a day without anything bad happening. 
-                        Knowing the shenanigans Garfield gets up to we can infer that Jons victory will be short lived. 
-                        This comic solidify lands in as my second favorite Garfield comic</p>
-                </section>
+            <tr>
+                <th colspan="2">Captain Skunkbeard</td>
+            </tr>
+            <tr>
+                <td><img src="resources/CaptainSkunkBeard.png" alt="The Black Night"></a>
+                <td>
+                    Captain Skunkbeard is a supposed ghost pirate. He has green skin, red clothes, and a big gray beard. He was extremely terrifying His true identity is Bigg Wellington, an eccentric billionaire. Biff Wellington was trying to get the Heaven's Light a meteor in the Bermuda triangle in hopes of getting its supposed time traveling abilities. He disguised himself as Captain Skunkbeard as an attempt to get closer to the center of the triangle 
+                </td>
+            </tr>
 
-                <section>
-                    <h3>Comic #1</h3>
-                    <figure>
-                        <img src="orange/comic-1.png" alt="Garfield Comic #1" class="comic">
-                        <figcaption><cite>Davis</cite></figcaption>
-                    </figure>
-                    <p>In this comic Garfield is seen wanting to be fed while Jon is busy trying to entertain us, 
-                        I feel like this does a great job summarizing Jon and Garfield as characters; 
-                        showing Jon as as down to earth everyman and Garfield as a hedonistic force of comedy. 
-                        Over all, I  find this extremely funny, funny enough to make it my favorite Gargfield Comic of all time.</p>
-                
-                    
+            <tr>
+                <th colspan="2">The Black Knight</td>
+            </tr>
+            <tr>
+                <td><img src="resources/TheBlackKnight.png" alt="The Black Night"></a>
+                <td>
+                    The black knight was a tall suit of armor with a red plume and glowing green eye. Legend has it that the black night  comes alive during a full moon. Despite its seemingly supernatural abilities the Black Knight is just the curator of the county museum Mr. Wikcles in disguise. Mr. Wickles was planning on replacing the paintings in the county museum with forgies and selling the originals. He dressed up as the Black Knight to scare away any one who wanted to stop his plan. 
+                </td>
+            </tr>
 
-                </section>
-        </main>
+        </table> 
+    </section>
+    <section>
+               
+    </section>
+</main>
     
 <?php 
 include "footer.php";

@@ -6,6 +6,7 @@
     --b: rgba(0,0,0,1);
     --w:rgba(255,255,255,1);
     --c:rgba(255,255,255,0);
+    --l: rgb(17, 85, 204);
 }
 
 
@@ -15,9 +16,9 @@
 }
 
 html {
-    animation-name: shake;
-    animation-duration: 1200s;
-    animation-iteration-count: infinite;
+    animation-name: movement, backgroundFade;
+    animation-duration: 1200s, 3s;
+    animation-iteration-count:infinite, 1;
     animation-timing-function: linear;
     background-image: url("../resources/background-top.png"),url("../resources/background-bottom.png"),url("../resources/background-texture.png"),url("../resources/flower.png"),url("../resources/flower.png");
     background-color: var(--w);
@@ -27,16 +28,23 @@ html {
     min-height: 100%;   
 }
 
-.footer {
-    margin-bottom: 5%;
-}
-@keyframes shake {
+
+@keyframes movement {
     0% {background-position: top center, bottom center, 0% 0%, 0% top, 0% bottom ;}
     100% {background-position: top center, bottom center, 0% 12000%, 1200% 0%, -1200% bottom;}
 }
 
+@keyframes backgroundFade {
+    0% {background-color: var(--4);}
+    100% {background-color: var(--c);}
+}
+
+/*.footer {
+    margin-bottom: 5%;
+}*/
+
 h3 {
-    animation-name: h3fade;
+    animation-name: h3Fade;
     animation-duration: 2s;
     animation-timing-function: linear;
     font-size:200%;
@@ -46,15 +54,16 @@ h3 {
     text-align: center;
     color: var(--4);
     font-family: spooky, fantasy;
+    padding: 0.25%;
 }
 
-@keyframes h3fade {
+@keyframes h3Fade {
     0% {background-color: var(--4); color: var(--2);}
     100% {background-color: var(--2); color: var(--4);}
 }
 
 h2 {
-    animation-name: h2fade;
+    animation-name: h2Fade;
     animation-duration: 1.5s;
     animation-timing-function: linear;
     color: var(--3);
@@ -65,14 +74,14 @@ h2 {
 }
 
 
-@keyframes h2fade {
+@keyframes h2Fade {
     0% {color: var(--c); font-size: 0%;}
     50% {color: var(--1);}
     100% {color: var(--3); font-size: 200%;}
   }
 
 h1 {
-    animation-name: h1fade;
+    animation-name: h1Fade;
     animation-duration: 1s;
     animation-timing-function: linear;
     color: var(--3);
@@ -83,7 +92,7 @@ h1 {
 }
 
 
-@keyframes h1fade {
+@keyframes h1Fade {
     0% {color: var(--c); font-size: 0%;}
     50% {color: var(--1);}
     100% {color: var(--3); font-size: 400%;}
@@ -93,7 +102,7 @@ h1 {
     transform: scale(1.05);
 }
 
-p {
+p, th, td {
     text-align: justify;
     font-family: Arial;
 }
@@ -109,10 +118,6 @@ img {
 nav {
     text-align: center;
 }
-
-fieldset p{
-    text-indent: 0%;
-  }
 
 
 ol,ul,table {
@@ -227,7 +232,7 @@ section {
 }
 
 .flexwide {
-    flex: 0 0 100%
+    flex: 1 1 100%
 }
 
 
@@ -242,11 +247,18 @@ h1 {
     flex: 0 0 100%;
 }
 
+label[for*="txt"] {
+    display:block;
+}
+
+fieldset p{
+    text-indent: 0;
+  }
 
 /*FlexBox End */
 
 a {
-    color:rgb(17, 85, 204);
+    color:var(--l);
     transition: color 200ms ease;
 }
 
@@ -279,7 +291,7 @@ nav {
 }
 
 nav a {
-    animation-name: h3fade;
+    animation-name: h3Fade2;
     animation-duration: 2s;
     animation-timing-function: linear;
     font-size:200%;
@@ -288,5 +300,28 @@ nav a {
     border-width: 10px;
     text-align: center;
     font-family: spooky, fantasy;
-    flex: 1 0 22%;
+    flex: 1 1 20%;
+    padding: 0.25%;
+
+}
+
+footer a {
+    animation-name: h3Fade2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    font-size:200%;
+    background-color: var(--2);
+    border:var(--1);
+    border-width: 10px;
+    text-align: center;
+    font-family: spooky, fantasy;
+    margin-bottom: 5%;
+    display:block;
+    padding: 0.25%;
+
+}
+
+@keyframes h3Fade2 {
+    0% {background-color: var(--4); color: var(--2);}
+    100% {background-color: var(--2); color: var(--l);}
 }

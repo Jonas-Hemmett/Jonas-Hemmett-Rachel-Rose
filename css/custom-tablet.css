@@ -1,3 +1,19 @@
-html {
-    background-size: 0.2%,0.2%,25%,4%,4%;
+section {
+    flex: 0 1 100%; 
+}
+
+.centerfig {
+    max-width: 40%;
+}
+
+input[class^="submit"] { 
+    width: 25%;
+    }
+
+input[type="radio"], input[type="checkbox"]{ 
+    transform: scale(1.5); 
+}
+
+ html {
+    background-size: 0.4%,0.4%,25%,8%,8%;
 }
