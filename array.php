@@ -5,7 +5,7 @@ include "top.php";
     <section class="flexWide">
         <h3>Mystery Inc. Members</h3>
         <p>
-            Text.
+            Here is a complete list of the 5 core Mystery Gang Members!
         </p>
         <table>
             <tr>
