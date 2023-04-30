@@ -161,9 +161,32 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             $statement = $pdo->prepare($sql);
             if($statement->execute($data)){
                 $messege .= '<h3>Thank You</h3>';
+
+                //mail code here
+                //everything in if statemnets
+                $to = $email;
+                $from = 'CS 008 Team <rrose1@uvm.edu>';
+                $subject = 'Rachel and Jonas CS 008 Final Project';
+
+                $mailMessage = '<p style="font: 14pt serif;">Thank you for taking ';
+                $mailMessage .= 'the time to fill out our survey.</p>';
+                $mailMessage .= '<span style="color: purple; padding-left: 5em">';
+                $mailMessage .= 'CS 008 Team</span></p>';
+
+                $headers = "MIME-Version: 1.0\r\n";
+                $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+                $headers .= "From: " . $from . "\r\n"; 
+                
+                $mailSent = mail($to, $subject, $mailMessage, $headers);
+
+                if($mailsent){
+                    print "<p>A copy has been emailed to you for your records.</p>";
+                    print $mailMessage;
+                }
+
                 $messege .= '<p>Your information was successfully saved.</p>';
             } else {
-                $messege .= '<p>Record was Not successfully saved.</p>';
+                $messege .= '<p>Record was NOT successfully saved.</p>';
             }
         } catch(PDOExeption $e){
             $messege .= '<p> couldn\t insert the record, please contact someone</p>';
