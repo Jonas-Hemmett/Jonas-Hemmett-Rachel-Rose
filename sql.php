@@ -3,7 +3,7 @@ include 'top.php'
 ?>
 <main>
 
-<h3>Create Table SQL<h3>
+<h3>Lab 9<h3>
     <pre>
     INSERT INTO tblGarfieldSurvery
         (pmkGarfieldSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldReadComic, fldSeenTV, fldWatchedMovie, fldFav, fldComments)
@@ -11,20 +11,18 @@ include 'top.php'
         (1,'Jonas', 'Hemmett', 'Johannes.Hemmett@uvm.edu','Male', 1, 1, 1,'disComic1', 'Garfield')
     </pre>
     <pre>
-    CREATE TABLE tblScoobyDooSurvery (
-        pmkScoobyDooSurveryId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CREATE TABLE tblGarfieldSurvery (
+        pmkGarfieldSurveyId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
         fldFirstName VARCHAR(40),
         fldLastName VARCHAR(40),
         fldEmail VARCHAR(50) DEFAULT NULL,
         fldGender VARCHAR(6) DEfAULT NULL,
-        fldDrCoffin TINYINT(1),
-        fldCaptainSkunkbeard TINYINT(1), 
-        fldtheMysteryMachine TINYINT(1), 
-        fldProfessorPericles TINYINT(1),
-        fldTheBlackKnight TINYINT(1),
-        fldEvil VARCHAR(11),
-        fldMysteryGangMember VARCHAR(11),
+        fldReadComic TINYINT(1),
+        fldSeenTV TINYINT(1),
+        fldWatchedMovie TINYINT(1),
+        fldFav VARCHAR(11),
         fldComments TEXT
+
     )
 
     </pre>

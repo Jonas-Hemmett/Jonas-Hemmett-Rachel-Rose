@@ -16,7 +16,7 @@
         if ($pathParts['filename'] == "array"){
             print 'activePage';
         }  
-        ?> " href=array.php>3</a>
+        ?> " href=array.php>Members</a>
 
         <a class="<?php 
         if ($pathParts['filename'] == "form"){

@@ -173,10 +173,10 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 ?>
 
 <main>
-    <section class="flexwide">
+    <section class="flexWide">
         <h3>Please fill out the form below</h3>
     </section>
-    <section class="flexwide">
+    <section class="flexWide">
     <!--php -->
         <?php
         print $messege;
@@ -186,7 +186,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         print'</pre>';
         ?>
     <!--php -->
-    </section class="flexwide">
+    </section class="flexWide">
     <section>
         <form action="#" method="POST">
             <fieldset class="lstplayblock">
@@ -247,7 +247,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkTheBlackKnight">The Black Knight</label>
                 </p>
                 <p class="lstplayblock">
-                    <label for="mostEvil">Most Evil Villian?<a href=detail.php> list for refrence</a></label>
+                    <label for="mostEvil">Most Evil Villian? <!--<a href=detail.php>list for refrence</a></label>-->
                     <select id="mostEvil" name="mostEvil">                      
                         <option
                             <?php if($mostEvil == "mostEvil1") print 'selected'; ?> value="mostEvil1">The Ghost of Dr. Coffin
@@ -271,7 +271,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Favorite Mystery Gang Member? <a href=detail.php>list for refrence</a></label>
+                    <label for="mysteryGangMember">Favorite Mystery Gang Member? <!--<a href=detail.php>list for refrence</a></label>-->
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option

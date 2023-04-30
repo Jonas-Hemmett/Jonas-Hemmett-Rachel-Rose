@@ -1,64 +1,82 @@
 <?php 
 include "top.php";
-
-$GarfieldArrays=array(
-    array("Garfield At Large: His First Book",1980,"1978-1979" ),
-    
-    array("Garfield Gains Weight: His Second Book",1981,"1979-1979"),
-
-    array("Garfield Bigger Than Life: His Third Book",1981,"1979-1980"),
-
-    array("Garfield Weighs In: His Fourth Book",1982,"1980-1980"),
-
-    array("Garfield Takes the Cake: His Fifth Book",1982,"1981-1982")
-)
 ?>
-
 <main>
-    <section>
-        <h3> Merchandise </h3>
-        <p>The Garfield franchise has a wide variety of merchandise including.</p>
-        <ul> 
-            <li>Books</li>
-            <li>Shirts</li>
-            <li>Tooth Brushes</li>
-            <li>Phones</li>
-            <li>Pillows</li>
-            <li>Slippers</li>
-            <li>Posters</li>
-            <li>And Many More!</li>
+    <section class="flexWide">
+        <h3>Mystery Inc. Members</h3>
+        <p>
+            Text.
+        </p>
+        <table>
+            <tr>
+                <th colspan="2">Scooby-Doo</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="resources/array/ScoobyDoo.png" alt="Scooby-Doo"></a>
+                </td>
+                <td> 
+                    Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.      Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.       Text.
+                </td>
+            </tr>
 
+
+            <tr>
+                <th colspan="2">Shaggy Rogers</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="resources/array/ShaggyRogers.png" alt="Shaggy Rogers"></a>
+                </td>
+                <td>
+                    Text.
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Fred Jones</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="resources/array/FredJones.png" alt="Fred Jones"></a>
+                </td>
+                <td>
+                    Text.
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Daphne Blake</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="resources/array/DaphneBlake.png" alt="Daphne Blake"></a>
+                </td>
+                <td>
+                    Text.
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">Velma Dinkley</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="resources/array/VelmaDinkley.png" alt="Velma Dinkley"></a>
+                </td>
+                <td>
+                    Text.
+                </td>
+            </tr>
+
+        </table> 
     </section>
     <section>
-        <h3>Garfield Compilation Books</h3>
-            <p>Since 1980 Garfield comics have been published in compilation books. Listed below are the first <?php print count($GarfieldArrays);?> books.<p>
-        <table>
-            <caption class="pa1">Compilations</caption>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Release Year</th>
-                    <th scope="col">Compilation Years</th>
-                </tr>
-            <?php
-                foreach ($GarfieldArrays as $GarfieldArray){
-                        print "<tr>";
-                        print "<th>".$GarfieldArray[0]."</th>";
-                        print "<td>".$GarfieldArray[1]."</td>";
-                        print "<td>".$GarfieldArray[2]."</td>";
-                        print "</tr>";
-                }
-
-                
-            ?>
-            <tr>
-                <td colspan="3" class="pa3"><cite>source:Penguin Random House</cite></td>
-            </tr>
-        </table>
-
+               
     </section>
 </main>
+    
 <?php 
 include "footer.php";
 ?>
-
-
+    
