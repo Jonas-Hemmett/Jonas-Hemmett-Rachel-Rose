@@ -115,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $totalChecked  += $theBlackKnight;
 
     if($totalChecked == 0){
-        $errorMessege .= '<p class="mistake">Please rchoose at least one favorite before completing the form.</p>';
+        $errorMessege .= '<p class="mistake">Please choose at least one villian.</p>';
         $dataIsGood = false;
     }
     
