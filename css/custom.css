@@ -9,7 +9,6 @@
     --l: rgb(17, 85, 204);
 }
 
-
 @font-face {
     font-family:Spooky;
     src: url("../resources/Spooky.ttf");
@@ -130,17 +129,31 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border:thin dashed var(--o);
+    border:thin dashed var(--c);
     padding: 20%;
 }
 
+td {
+    animation-name: wireFade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    border:thick solid var(--2);
+    padding: 1%;
+}
 
-li:nth-child(even),tr:nth-child(even) {
+@keyframes wireFade {
+    0% {border:thick solid var(--4);}
+    100% {border:thick solid var(--2);}
+}
+
+/*li:nth-child(even),tr:nth-child(even) {
     background-color: rgba(200,200,200,0.5)
 }
 li:nth-child(odd),tr:nth-child(odd) {
     background-color: rgba(220, 220, 220,0.5)
 }
+
+/
 
 td{
     border:thin solid var(--b)
@@ -150,6 +163,9 @@ th{
     border:thin dashed var(--o)
 }
 
+td, th{
+    padding:1%
+}
 
 /*Insert Start*/
 
@@ -231,7 +247,7 @@ section {
     flex: 1 1 48%; 
 }
 
-.flexwide {
+.flexWide {
     flex: 1 1 100%
 }
 
@@ -315,6 +331,7 @@ footer a {
     border-width: 10px;
     text-align: center;
     font-family: spooky, fantasy;
+    margin-top: 3%;
     margin-bottom: 5%;
     display:block;
     padding: 0.25%;
@@ -324,4 +341,14 @@ footer a {
 @keyframes h3Fade2 {
     0% {background-color: var(--4); color: var(--2);}
     100% {background-color: var(--2); color: var(--l);}
+}
+
+fieldset, input {
+    animation-name: wireFade;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    border-width: thick;
+    font-family: arial;
+    border-style: solid;
+    border-color: var(--2);
 }
