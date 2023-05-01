@@ -250,7 +250,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                 <fieldset>
                     <legend><strong>Select your favorite Scooby Doo Villians</strong></legend>
                 <p>
-                    <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" required <?php if($drCoffin) print 'checked';?>>
+                    <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" <?php if($drCoffin) print 'checked';?>>
                     <label for="chkDrCoffin">The Ghost of Dr. Coffin</label>
                 </p>
                 <p>
