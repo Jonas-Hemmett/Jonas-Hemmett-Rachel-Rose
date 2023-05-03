@@ -2,18 +2,18 @@
 include 'top.php';
 
 
-$evilOptions = array('mostEvil1', 'mostEvil2', 'mostEvil3' ,'mostEvil4','mostEvil5', 'mostEvil6');
+$evilOptions = array('The Ghost of Dr. Coffin', 'Captain Skunkbeard', 'The Mystery Machine' ,'Professor Pericles','The Black Knight',);
 $mysteryGangMemberOptions= array ('Scooby', 'Shaggy', 'Velma', 'Daphne', 'Fred');
 
 $dataIsGood = false;
 $errorMessege = '';
-$messege = '';
+$message = '';
 
 $firstName = '';
 $lastName = '';
 $email = '';
 $gender = '';
-$drCoffin = 1;
+$drCoffin = 0;
 $captainSkunkbeard = 0;
 $theMysteryMachine = 0;
 $professorPericles = 0;
@@ -21,6 +21,7 @@ $theBlackKnight = 0;
 $mostEvil = '';
 $mysteryGangMember = '';
 $comment = '';
+$mailMessage= '';
 
 function getData($field) {
     if (!isset($_POST[$field])) {
@@ -35,8 +36,9 @@ function verifyAlphaNum($testString) {
     // Check for letters, numbers and dash, period, space and single quote only.
     // added & ; and # as a single quote sanitized with html entities will have 
     // this in it bob's will be come bob's
-    return (preg_match ("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
+    return (preg_match ("/^([[:alnum:]]|-|\.|?| |>|:|\'|&|;|#)+$/", $testString));
 }
+
 if($_SERVER["REQUEST_METHOD"] == 'POST'){
      
     print PHP_EOL . ' <!-- Starting Sanitization -->' . PHP_EOL;
@@ -46,9 +48,9 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $email = getData('txtEmail');
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     $gender = getData('radGender');
-    $drCoffin = (int) getData('chkdrCoffin');
+    $drCoffin = (int) getData('chkDrCoffin');
     $captainSkunkbeard = (int) getData('chkCaptainSkunkbeard');
-    $theMysteryMachine = (int) getData('theMysteryMachine');
+    $theMysteryMachine = (int) getData('chkTheMysteryMachine');
     $professorPericles = (int) getData('chkProfessorPericles');
     $theBlackKnight = (int) getData('chkTheBlackKnight');
     $mostEvil = getData('mostEvil');
@@ -99,23 +101,23 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
    
     $totalChecked = 0;
 
-    if ($drCoffin != 1) $drCoffin = 0;
+    //if ($drCoffin != 1) $drCoffin = 0;
     $totalChecked += $drCoffin;
 
-    if ($captainSkunkbeard != 1) $captainSkunkbeard = 0;
+    //if ($captainSkunkbeard != 1) $captainSkunkbeard = 0;
     $totalChecked += $captainSkunkbeard;
 
-    if ($theMysteryMachine != 1) $theMysteryMachine  = 0;
+    //if ($theMysteryMachine != 1) $theMysteryMachine  = 0;
     $totalChecked  += $theMysteryMachine;
 
-    if ($professorPericles != 1) $professorPericles  = 0;
+    //if ($professorPericles != 1) $professorPericles  = 0;
     $totalChecked  += $professorPericles;
 
-    if ($theBlackKnight != 1) $theBlackKnight  = 0;
+    //if ($theBlackKnight != 1) $theBlackKnight  = 0;
     $totalChecked  += $theBlackKnight;
 
     if($totalChecked == 0){
-        $errorMessege .= '<p class="mistake">Please choose at least one villian.</p>';
+        $errorMessege .= '<p class="mistake">Please choose at least one favorite villian before completing the form.</p>';
         $dataIsGood = false;
     }
     
@@ -132,17 +134,17 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         $errorMessege .= '<p class="mistake">Please choose a Mystery Gang Member.</p>';
         $dataIsGood = false;
     } elseif (!in_array($mysteryGangMember, $mysteryGangMemberOptions)){
-        $errorMessege .= '<p class="mistake">Please choose a Mystery Gang Member.</p>';
+        $errorMessege .= '<p class="mistake">Please choose a Mystery Gang Member from array.</p>';
         $dataIsGood = false;
     }
 
     print PHP_EOL . ' <!--6-->' . PHP_EOL;
 
     if($comment == ''){
-        $errorMessege .= '<p class="mistake">Please share your comments.</p>';
+        $errorMessege .= '<p class="mistake">Please share your comments 1.</p>';
         $dataIsGood = false;
     } elseif (!verifyAlphaNum($comment)){
-        $errorMessege .= '<p class="mistake">Please share your comments.</p>';
+        $errorMessege .= '<p class="mistake"> you comment is not alphanumeric.</p>';
         $dataIsGood = false;
     }
     print PHP_EOL . ' <!--7-->' . PHP_EOL;
@@ -150,17 +152,40 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     print '<!--Starting Saving-->';
 
     if($dataIsGood){
-        $sql = 'INSERT INTO tblGarfieldSurvery
-        (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
-        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldEvil, fldComments)';
-        $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $mostEvil, $mysteryGangmember);
+        /*lab 9, 05:00 try to fix it not savng to my database*/
+        $sql = 'INSERT INTO tblScoobyDooSurvery
+            (fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
+            fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldMostEvil, fldMysteryGangMember, fldComments) ';
+            $sql .='VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'; 
+
+        $data = array($firstName, $lastName, $email, $gender, $drCoffin, $captainSkunkbeard, $theMysteryMachine, $professorPericles, $theBlackKnight, $mostEvil, $mysteryGangMember, $comment);
+        $message= 'Saving';
+
+        
+        //the thing we try if it doesnt save to database
+        //prinst what u want to insert onto the page
+        $sqlText = $sql;
+        foreach ($data as $value){
+            // Look for ? and replace with the value
+            // look for ? replace with value
+            $pos = strpos($sqlText, '?');
+            if ($pos !== false) {
+             $sqlText = substr_replace($sqlText, '"' . $value . '"', $pos, strlen('?'));
+            }
+        }
+        print '<p>' . $sqlText . '</p>';
+        
+        
 
         try{
+            //moved inside try statem
+
             $statement = $pdo->prepare($sql);
             if($statement->execute($data)){
-                $messege .= '<h3>Thank You</h3>';
+                $message .= '<h3>Thank You</h3>';
+
+                print '<p>you have made it here</p>';
 
                 //mail code here
                 //everything in if statemnets
@@ -179,22 +204,27 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                 
                 $mailSent = mail($to, $subject, $mailMessage, $headers);
 
-                if($mailsent){
+                
+                if($mailSent){
                     print "<p>A copy has been emailed to you for your records.</p>";
-                    print $mailMessage;
+                    //print $mailMessage;
                 }
+                
 
-                $messege .= '<p>Your information was successfully saved.</p>';
+                $message .= '<p>Your information was successfully saved.</p>';
             } else {
-                $messege .= '<p>Record was NOT successfully saved.</p>';
+                $message .= '<p>Record was NOT successfully saved.</p>';
             }
         } catch(PDOExeption $e){
-            $messege .= '<p> couldn\t insert the record, please contact someone</p>';
+            $message .= '<p> Couldn\t insert the record, please contact someone</p>';
         }
     }
 }
 ?>
 
+
+<!--put stuff in main for it to print? also check curly braces-->
+<!--also why wony= dr. coffin be marked as checked?-->
 <main>
     <section class="flexWide">
         <h3>Please fill out the form below</h3>
@@ -202,12 +232,16 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     <section class="flexWide">
     <!--php -->
         <?php
-        print $messege;
+        print $message;
         print $errorMessege;
+        print $mailMessage;
+
+        //delete when have final proj
         print '<p>Post Array:</p><pre>';
         print_r($_POST);
         print'</pre>';
         ?>
+
     <!--php -->
     </section class="flexWide">
     <section>
@@ -250,7 +284,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                 <fieldset>
                     <legend><strong>Select your favorite Scooby Doo Villians</strong></legend>
                 <p>
-                    <input type="checkbox" name="chkDrCoffin" id="chkkDrCoffin" value="1" <?php if($drCoffin) print 'checked';?>>
+                    <input type="checkbox" name="chkDrCoffin" id="chkDrCoffin" value="1" <?php if($drCoffin) print 'checked';?>>
                     <label for="chkDrCoffin">The Ghost of Dr. Coffin</label>
                 </p>
                 <p>
@@ -266,26 +300,26 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkProfessorPericles">Professor Pericles</label>
                 </p>
                 <p>
-                    <input type="checkbox" name="chkTheBlackKnight" id="chkTheBlackKnight" value="1" <?php if($theBlackKnight) print 'checked';?>>
+                    <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
                     <label for="chkTheBlackKnight">The Black Knight</label>
                 </p>
                 <p class="lstplayblock">
                     <label for="mostEvil">Most Evil Villian? <!--<a href=detail.php>list for refrence</a></label>-->
                     <select id="mostEvil" name="mostEvil">                      
                         <option
-                            <?php if($mostEvil == "mostEvil1") print 'selected'; ?> value="mostEvil1">The Ghost of Dr. Coffin
+                            <?php if($mostEvil == "The Ghost of Dr. Coffin") print 'selected'; ?> value="The Ghost of Dr. Coffin">The Ghost of Dr. Coffin
                         </option>
                         <option
-                            <?php if($mostEvil == "mostEvil2") print 'selected'; ?> value="mostEvil2">Captain Skunkbeard
+                            <?php if($mostEvil == "Captain Skunkbeard") print 'selected'; ?> value="Captain Skunkbeard">Captain Skunkbeard
                         </option>
                         <option
-                            <?php if($mostEvil == "mostEvil3") print 'selected'; ?> value="mostEvil3">The Mystery Machine
+                            <?php if($mostEvil == "The Mystery Machine") print 'selected'; ?> value="The Mystery Machine">The Mystery Machine
                         </option>
                         <option
-                            <?php if($mostEvil == "mostEvil4") print 'selected'; ?> value="mostEvil4">Professor Pericles
+                            <?php if($mostEvil == "Professor Pericles") print 'selected'; ?> value="Professor Pericles">Professor Pericles
                         </option>
                         <option
-                            <?php if($mostEvil == "mostEvil5") print 'selected'; ?> value="mostEvil5">The Black Knight
+                            <?php if($mostEvil == "The Black Knight") print 'selected'; ?> value="The Black Knight">The Black Knight
                         </option>
                     </select>
                 </p>
@@ -294,7 +328,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Favorite Mystery Gang Member? <!--<a href=detail.php>list for refrence</a></label>-->
+                    <label for="mysteryGangMember">Favorite Mystery Gang Member? 
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option
