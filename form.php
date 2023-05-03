@@ -266,7 +266,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkProfessorPericles">Professor Pericles</label>
                 </p>
                 <p>
-                    <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
+                    <input type="checkbox" name="chkTheBlackKnight" id="chkTheBlackKnight" value="1" <?php if($theBlackKnight) print 'checked';?>>
                     <label for="chkTheBlackKnight">The Black Knight</label>
                 </p>
                 <p class="lstplayblock">
