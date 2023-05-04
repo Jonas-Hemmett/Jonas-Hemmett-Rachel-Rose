@@ -1,7 +1,7 @@
 <?php 
 include "top.php";
 ?>
-<main>
+<main class="mainFlex">
     <section class="flexWide flexList">
         <h3>Mystery Inc. Members</h3>
         <p>
@@ -28,7 +28,7 @@ include "top.php";
                 <img src="resources/array/ShaggyRogers.png" alt="Shaggy Rogers">
             </figure>
             <p>
-                Shaggy is a hippy member of the Mystery Gang with a laid back personality. He frequently slips in the word "Like" in his speech and uses his catch phrase "Zoinks!" whenever he's surprised or scared. He known to frequently be hungry, is able to eat range quantities of food and can easily be persuaded by Scooby Snacks
+                Shaggy is a hippy member of the Mystery Gang with a laid back personality. He frequently slips in the word "Like" in his speech and uses his catch phrase "Zoinks!" whenever he's surprised or scared. He known to frequently be hungry, is able to eat range quantities of food and can easily be persuaded by Scooby Snacks.
             </p>
         </section>
 

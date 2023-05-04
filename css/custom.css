@@ -7,11 +7,14 @@
     --w:rgba(255,255,255,1);
     --c:rgba(255,255,255,0);
     --l: rgb(17, 85, 204);
+    --fontSize: 100%;
+    --fontSize2: 200%;
+    --fontSize3: 400%;
 }
 
 @font-face {
     font-family:Spooky;
-    src: url("../resources/Spooky.ttf");
+    src: url("../resources/fonts/Spooky.ttf");
 }
 
 html {
@@ -19,7 +22,7 @@ html {
     animation-duration: 1200s, 3s;
     animation-iteration-count:infinite, 1;
     animation-timing-function: linear;
-    background-image: url("../resources/background-top.png"),url("../resources/background-bottom.png"),url("../resources/background-texture.png"),url("../resources/flower.png"),url("../resources/flower.png");
+    background-image: url("../resources/background/top.png"),url("../resources/background/bottom.png"),url("../resources/background/texture.png"),url("../resources/background/flower.png"),url("../resources/background/flower.png");
     background-color: var(--w);
     background-repeat: repeat-x,repeat-x,repeat,repeat-x,repeat-x;
     background-position: top center,bottom center,0% 0%,top center,bottom center;
@@ -30,7 +33,7 @@ html {
 
 @keyframes movement {
     0% {background-position: top center, bottom center, 0% 0%, 0% top, 0% bottom ;}
-    100% {background-position: top center, bottom center, 0% 12000%, 1200% 0%, -1200% bottom;}
+    100% {background-position: top center, bottom center, 0% 2000%, 1200% 0%, -1200% bottom;}
 }
 
 @keyframes backgroundFade {
@@ -38,15 +41,13 @@ html {
     100% {background-color: var(--c);}
 }
 
-/*.footer {
-    margin-bottom: 5%;
-}*/
 
 h3 {
     animation-name: h3Fade;
     animation-duration: 2s;
     animation-timing-function: linear;
-    font-size:200%;
+    font-size: var(--fontSize2)
+;
     background-color: var(--2);
     border:var(--1);
     border-width: 10px;
@@ -66,7 +67,8 @@ h2 {
     animation-duration: 1.5s;
     animation-timing-function: linear;
     color: var(--3);
-    font-size:200%;
+    font-size: var(--fontSize2)
+;
     font-family: spooky, fantasy;
     text-align: center;  
     margin-top: 0%;
@@ -87,7 +89,6 @@ h1 {
     font-size:400%;
     font-family: spooky, fantasy;
     margin-bottom: 0%;
-
 }
 
 
@@ -101,18 +102,16 @@ h1 {
     transform: scale(1.05);
 }
 
-p, th, td {
+p, h4, th, td, pre {
     text-align: justify;
     font-family: Arial;
+    font-size: var(--fontSize)
 }
 
 figcaption {
     font-size:xx-small    
 }
 
-img {
-    max-width: 100%;
-}
 
 nav {
     text-align: center;
@@ -129,7 +128,6 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    border:thin dashed var(--c);
     padding: 20%;
 }
 
@@ -146,80 +144,22 @@ td {
     100% {border:thick solid var(--2);}
 }
 
-/*li:nth-child(even),tr:nth-child(even) {
-    background-color: rgba(200,200,200,0.5)
-}
-li:nth-child(odd),tr:nth-child(odd) {
-    background-color: rgba(220, 220, 220,0.5)
-}
-
-/
-
-td{
-    border:thin solid var(--b)
-}
-
-th{
-    border:thin dashed var(--o)
-}
-
-td, th{
-    padding:1%
-}
-
-/*Insert Start*/
-
-/* nav start
-
-nav a:link {
-   font-size: x-large; 
-   text-decoration: none;
-}
-
-
-
-nav {
-    text-align: center;
-    margin:auto;
-
-    
-}
-
-nav {
-    display: flex;
-}
-
-nav a{
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    flex: 1 1 100%
-}
-
-nav end*/
-
-
-
-
-/*Insert End */
-
-/*Various Fixes Start */
 .pa1 {
     font-size:large;
 }
 
 .pa3 {
-    color: rgba(255,164,0,1)
+    color: var(--2)
 }
-/*Various Fixes End*/
 
 input[type=submit] {
-    background-color: var(--o); 
-    width: 15%;
+    background-color: var(--c); 
+    color: var(--l); 
     }
 
 input[type=submit]:hover {
-        background-color: var(--b); 
-        color: var(--o); 
+        background-color: var(--l); 
+        color: var(--3); 
         }
 
 input[type=radio],input[type=checkbox],input[type=submit] {
@@ -230,10 +170,7 @@ input[type=radio],input[type=checkbox],input[type=submit] {
     display:block
 }
 
-
-/*FlexBox Start */
-
-main {
+.mainFlex {
     display:flex;
     flex-wrap:wrap;
     column-gap: 3%;
@@ -250,8 +187,6 @@ section {
 .flexWide {
     flex: 1 1 100%
 }
-
-
 
 h1 {
     flex: 0 0 100%;
@@ -271,8 +206,6 @@ fieldset p{
     text-indent: 0;
   }
 
-/*FlexBox End */
-
 a {
     color:var(--l);
     transition: color 200ms ease;
@@ -282,20 +215,6 @@ a:hover[href$=".php"] {
     color: var(--b);
     text-decoration: underline;
   }
-
-
-
-
- .comic{
-    width:75%;
-    height:auto;
- }
-
-/*h1,h3,h3,p,table,ol,ul{
-padding-left:0.25rem;
-padding-right:0.25rem;
-}
-*/
 
 .activePage{
     color:var(--b)}
@@ -310,10 +229,10 @@ nav a {
     animation-name: h3Fade2;
     animation-duration: 2s;
     animation-timing-function: linear;
-    font-size:200%;
+    font-size: var(--fontSize2)
+;
     background-color: var(--2);
     border:var(--1);
-    border-width: 10px;
     text-align: center;
     font-family: spooky, fantasy;
     flex: 1 1 20%;
@@ -325,30 +244,83 @@ footer a {
     animation-name: h3Fade2;
     animation-duration: 2s;
     animation-timing-function: linear;
-    font-size:200%;
+    font-size: var(--fontSize2)
+;
     background-color: var(--2);
     border:var(--1);
     border-width: 10px;
     text-align: center;
     font-family: spooky, fantasy;
-    margin-top: 3%;
-    margin-bottom: 5%;
     display:block;
     padding: 0.25%;
-
+    margin-top: 2%;
 }
 
 @keyframes h3Fade2 {
-    0% {background-color: var(--4); color: var(--2);}
-    100% {background-color: var(--2); color: var(--l);}
+    0% {background-color: var(--4);}
+    100% {background-color: var(--2);}
 }
 
-fieldset, input {
+fieldset {
     animation-name: wireFade;
     animation-duration: 2s;
     animation-timing-function: linear;
     border-width: thick;
     font-family: arial;
+    font-size: var(--fontSize);
     border-style: solid;
     border-color: var(--2);
 }
+
+footer{
+    margin-bottom: 5%;
+}
+
+
+h4 {
+    font-size: var(--fontSize2)
+;
+    text-align: center;
+}
+
+.flexList section {
+    display: flex;
+    flex-wrap:wrap;
+    border:thick solid var(--2);
+    margin-bottom: 1em;
+    
+
+}
+
+.flexList section h4 {
+    flex: 0 0 100%;
+}
+
+.flexList section figure {
+    flex: 0 0 20%;
+    margin: auto;
+    border-width: 0px;
+
+}
+
+.flexList section p {
+    flex:1 0 70%;
+    vertical-align:middle;
+    margin-top: 0px;
+
+}
+
+.flexList h4 {
+    margin: 0px
+}
+
+.flexList img {
+    width:256px;
+    display:block;
+}
+
+p, pre {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+

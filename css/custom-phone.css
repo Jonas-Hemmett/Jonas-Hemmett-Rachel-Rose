@@ -3,6 +3,10 @@ input[class^="submit"]{
     }
 
 
-    html {
-        background-size: 0.8%,0.8%,12.5%,16%,16%;
-    }
+html {
+    background-size: 0.8%,0.8%,12.5%,16%,16%;
+}
+
+nav a{
+    margin-top:8%;
+}

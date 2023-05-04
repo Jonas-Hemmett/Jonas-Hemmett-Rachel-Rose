@@ -19,7 +19,7 @@ include "top.php";
             <section>
                 <h3>History Of The Show</h3>
                     <p>
-                        Scooby-Doo Where Are You? the initial iteration of the show, was launched in 1969 through Hanna Barbera productions. It was written by Joe Ruby and Ken Spears and aired on CBS. The original run of Scooby-Doo would go on for nearly a decade, ending in late 1978. Since then the show would be rebooted a numerous of times over the decade, with the most recent version of the show, loosely based around the character Velma, coming out earlier this year..
+                        Scooby-Doo Where Are You? the initial iteration of the show, was launched in 1969 through Hanna Barbera productions. It was written by Joe Ruby and Ken Spears and aired on CBS. The original run of Scooby-Doo would go on for nearly a decade, ending in late 1978. Since then the show would be rebooted a numerous of times over the decade, with the most recent version of the show, loosely based around the character Velma, coming out earlier this year.
                     </p>
                      <!-- 
                     <table>
@@ -51,7 +51,7 @@ include "top.php";
                     -->
             </section>
             <section>
-                <h3>Why we picked Scooby-Doo?</h3>
+                <h3>Why we picked Scooby-Doo</h3>
                     <p>
                         Why did we pick Scooby-Doo as the topic for our final Computer Science project? We picked it because we love it! Growing up both of our favorite shows where Scooby-Doo; we both liked watching Scooby and the gang solve mysteries and unmask monstrous villains. 
                     </p>

@@ -16,7 +16,7 @@ $pathParts = pathinfo($phpSelf);
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico">
 
         <link rel="stylesheet" 
         href="css/custom.css?version=<?php print time(); ?>" 
