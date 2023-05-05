@@ -3,35 +3,57 @@ include 'top.php'
 ?>
 <main>
 
-<h3 class="flexWide">SQL Code</h3>
+<h3>Final<h3>
+    <pre>
+    INSERT INTO tblScoobyDooSurvery
+    (pmkScoobyDooSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldMostEvil, fldMysteryGangMember, fldComments)
+        VALUES
+        (1,'Rachel', 'Rose', 'rrose1@uvm.edu','Female', 1, 1, 1, 1, 1,'The Ghost of Dr. Coffin', 'Scooby', 'Slayyyy')
+    </pre>
+    <pre>
+    CREATE TABLE tblScoobyDooSurvery (
+        pmkScoobyDooSurveyId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        fldFirstName VARCHAR(40),
+        fldLastName VARCHAR(40),
+        fldEmail VARCHAR(50) DEFAULT NULL,
+        fldGender VARCHAR(6) DEfAULT NULL,
+        fldDrCoffin TINYINT(1),
+        fldCaptainSkunkbeard TINYINT(1),
+        fldTheMysteryMachine TINYINT(1),
+        fldProfessorPericles TINYINT(1),
+        fldTheBlackKnight TINYINT(1),
+        fldMostEvil VARCHAR(40),
+        fldMysteryGangMember VARCHAR(11),
+        fldComments TEXT
+    )
 
-<pre class="flexWide">
-INSERT INTO tblGarfieldSurvery
-    (pmkGarfieldSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldReadComic, fldSeenTV, fldWatchedMovie, fldFav, fldComments)
-    VALUES
-    (1,'Jonas', 'Hemmett', 'Johannes.Hemmett@uvm.edu','Male', 1, 1, 1,'disComic1', 'Garfield')
-</pre>
-<pre class="flexWide">
-CREATE TABLE tblGarfieldSurvery (
-    pmkGarfieldSurveyId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    fldFirstName VARCHAR(40),
-    fldLastName VARCHAR(40),
-    fldEmail VARCHAR(50) DEFAULT NULL,
-    fldGender VARCHAR(6) DEfAULT NULL,
-    fldReadComic TINYINT(1),
-    fldSeenTV TINYINT(1),
-    fldWatchedMovie TINYINT(1),
-    fldFav VARCHAR(11),
-    fldComments TEXT
+    </pre>
 
-)
+    <h3>Final table<h3>
+    <pre>
+    CREATE TABLE tblEpisodes (
+        pmkSEpisodesId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        fldRanking VARCHAR(40),
+        fldEpisodeName VARCHAR(40),
+        fldRating VARCHAR(40)
+    );
+    </pre>
+    <pre> 
+    INSERT INTO tblScoobyDooSurvery 
+    (pmkScoobyDooSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
+        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldMostEvil, fldMysteryGangMember, fldComments)
+        VALUES
+        (1,'Rachel', 'Rose', 'rrose1@uvm.edu','Female', 1, 1, 1, 1, 1,'The Ghost of Dr. Coffin', 'Scooby', 'Slayyyy')
+    </pre>
 
-</pre>
-<p class="flexWide">
-    Create Table SQL
-</p>
+<?php  
+/*  
 
-<pre class="flexWide">
+        //fix when we fix the charcter tables
+    <p>Create Table SQL</p>
+
+<pre>
     CREATE TABLE tblMovies(
         pmkMovieId INT AUTO_INCREMENT PRIMARY KEY,
         fldName VARCHAR(40),
@@ -39,7 +61,7 @@ CREATE TABLE tblGarfieldSurvery (
         fldRating INTEGER
     )
 </pre>
-<pre class="flexWide">
+<pre>
     INSERT INTO tblMovies
     (fldName, fldRelease, fldRating)
     Values
@@ -51,6 +73,10 @@ CREATE TABLE tblGarfieldSurvery (
 
 
 </pre>
+*/
+?>
+
 </main>
 <?php include 'footer.php'; ?>
+</body>
 </html>
