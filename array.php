@@ -1,8 +1,7 @@
 <?php 
 include "top.php";
 ?>
-<main class="mainFlex">
-    <section class="flexWide flexList">
+<main>    <section class="flexWide flexList">
         <h3>Mystery Inc. Members</h3>
         <p>
             listed below is a  list of the five core Mystery Gang Members.
@@ -61,7 +60,7 @@ include "top.php";
                 Velma Dinkley
             </h4>
             <figure>
-                <img src="resources/array/VelmaDinkley.png" alt="Velma Dinkley"></a>
+                <img src="resources/array/VelmaDinkley.png" alt="Velma Dinkley">
             </figure>
             <p>
                 Velma is known as the most intelligent member of the Mystery Gang.She usually wears a orange shirt and red skirt and is often the one to decipher the clues and solve the crimes.She is sharp-witted and sometimes sarcastic. She frequently loses her glasses  and immediately claims, "My glasses. I can't find my glasses" or "I can't see without my glasses," before crawling around on the floor until she finds them.   

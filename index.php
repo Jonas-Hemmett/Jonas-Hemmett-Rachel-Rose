@@ -55,11 +55,60 @@ include "top.php";
                     <p>
                         Why did we pick Scooby-Doo as the topic for our final Computer Science project? We picked it because we love it! Growing up both of our favorite shows where Scooby-Doo; we both liked watching Scooby and the gang solve mysteries and unmask monstrous villains. 
                     </p>
-                    
+            </section>
+            <section>
+                <h3>Best Episodes</h3>
+                    <p>
+                        Listed below are the five best epiosdes according to IMDB.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Ranking</th>
+                            <th>Episode Name</th>
+                            <th>rating</th>
+
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Jeepers, It's the Creeper</td>
+                            <td>84%</td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>The Midnight Zone </td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A Night of Fright Is No Delight</td>
+                            <td>86%</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Wrath of the Krampus</td>
+                            <td>88%</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>All Fear the Freak</td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td colspan=3><cite>source:IMDB</cite></td>
+                        </tr>
+                    </table>
+            </section>
+            <section>
+                <h3>Fun Facts</h3>
+                    <p>
+                        <ul>
+                            <li>
+                            
+                            </li>
+                    </p>
             </section>
         </main>
-        
-</body>
 <?php 
 include "footer.php";
 ?>

@@ -3,15 +3,15 @@ include 'top.php'
 ?>
 <main>
 
-<h3>Final</h3>
+<h3 class="flexWide">SQL Code</h3>
 
-<pre>
+<pre class="flexWide">
 INSERT INTO tblGarfieldSurvery
     (pmkGarfieldSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldReadComic, fldSeenTV, fldWatchedMovie, fldFav, fldComments)
     VALUES
     (1,'Jonas', 'Hemmett', 'Johannes.Hemmett@uvm.edu','Male', 1, 1, 1,'disComic1', 'Garfield')
 </pre>
-<pre>
+<pre class="flexWide">
 CREATE TABLE tblGarfieldSurvery (
     pmkGarfieldSurveyId int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     fldFirstName VARCHAR(40),
@@ -27,11 +27,11 @@ CREATE TABLE tblGarfieldSurvery (
 )
 
 </pre>
-<p>
+<p class="flexWide">
     Create Table SQL
 </p>
 
-<pre>
+<pre class="flexWide">
     CREATE TABLE tblMovies(
         pmkMovieId INT AUTO_INCREMENT PRIMARY KEY,
         fldName VARCHAR(40),
@@ -39,7 +39,7 @@ CREATE TABLE tblGarfieldSurvery (
         fldRating INTEGER
     )
 </pre>
-<pre>
+<pre class="flexWide">
     INSERT INTO tblMovies
     (fldName, fldRelease, fldRating)
     Values
@@ -53,5 +53,4 @@ CREATE TABLE tblGarfieldSurvery (
 </pre>
 </main>
 <?php include 'footer.php'; ?>
-</body>
 </html>

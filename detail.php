@@ -1,7 +1,7 @@
 <?php 
 include "top.php";
 ?>
-<main class="mainFlex">
+<main>
     <section class="flexWide flexList">
         <h3>Villains</h3>
         <p>

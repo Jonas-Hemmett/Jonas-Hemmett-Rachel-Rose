@@ -2,7 +2,7 @@
 
 $phpSelf = htmlspecialchars($_SERVER['PHP_SELF']);
 
-$pathParts = pathinfo($phpSelf);
+$path_parts = pathinfo($phpSelf);
 ?>
 
 <!DOCTYPE HTML>
@@ -37,7 +37,7 @@ $pathParts = pathinfo($phpSelf);
     </head>
 <?php 
 //lab8start
-    print '<body=class"grid-layout positioning"
+    print '<body class="grid-layout positioning"
                 id="' . $path_parts['filename'] . '">';
     print '<!--####     Start Of Body   ####-->';
     include 'connect-DB.php';
