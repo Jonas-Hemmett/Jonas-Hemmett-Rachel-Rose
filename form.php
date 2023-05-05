@@ -32,12 +32,26 @@ function getData($field) {
     }
     return $data;
 }
+/*
 function verifyAlphaNum($testString) {
     // Check for letters, numbers and dash, period, space and single quote only.
     // added & ; and # as a single quote sanitized with html entities will have 
     // this in it bob's will be come bob's
-    return (preg_match ("/^([[:alnum:]]|-|\.|?| |>|:|\'|&|;|#)+$/", $testString));
+    return (preg_match ("/^([[:alnum:]]|-|\.|?| |>|:|-|!|\'|&|;|#)+$/", $testString));
 }
+
+*/
+function verifyAlphaNum($testString) {
+
+    // Check for letters, numbers and dash, period, space and single quote only.
+    
+    // added & ; and # as a single quote sanitized with html entities will have 
+    
+    // this in it bob's will be come bob's
+    
+    return (preg_match ("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
+    
+    }
 
 if($_SERVER["REQUEST_METHOD"] == 'POST'){
      
@@ -64,10 +78,10 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $dataIsGood = true;
 
     if($firstName == ''){
-        $errorMessege .= '<p class="mistake">Please Enter your first name.</p>';
+        $errorMessege .= '<p class="mistake">Please Enter your first name</p>';
         $dataIsGood = false;
     } elseif (!verifyAlphaNum($firstName)){
-        $errorMessege .= '<p class="mistake">Please Enter your first name.</p>';
+        $errorMessege .= '<p class="mistake">Your first name entry isnt alphanumeric.</p>';
         $dataIsGood = false;
     }
 
@@ -77,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         $errorMessege .= '<p class="mistake">Please Enter your last name.</p>'; 
         $dataIsGood = false;
     } elseif (!verifyAlphaNum($lastName)){
-        $errorMessege .= '<p class="mistake">Please Enter your last name.</p>';
+        $errorMessege .= '<p class="mistake">Your last name entry isnt alphanumeric.</p>';
         $dataIsGood = false;
     }
 
@@ -163,6 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         $message= 'Saving';
 
         
+        /*
         //the thing we try if it doesnt save to database
         //prinst what u want to insert onto the page
         $sqlText = $sql;
@@ -175,7 +190,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             }
         }
         print '<p>' . $sqlText . '</p>';
-        
+        */
         
 
         try{
@@ -185,18 +200,16 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             if($statement->execute($data)){
                 $message .= '<h3>Thank You</h3>';
 
-                print '<p>you have made it here</p>';
-
                 //mail code here
                 //everything in if statemnets
                 $to = $email;
-                $from = 'CS 008 Team <rrose1@uvm.edu>';
-                $subject = 'Rachel and Jonas CS 008 Final Project';
+                $from = 'Rachel and Jonas CS008<rrose1@uvm.edu>';
+                $subject = 'Scooby-Doo Survey';
 
-                $mailMessage = '<p style="font: 14pt serif;">Thank you for taking ';
-                $mailMessage .= 'the time to fill out our survey.</p>';
-                $mailMessage .= '<span style="color: purple; padding-left: 5em">';
-                $mailMessage .= 'CS 008 Team</span></p>';
+                $mailMessage = '<p style="font: 14pt serif;">Thanks for taking ';
+                $mailMessage .= 'our survey! We are excited to hear what you think about Scooby Doo</p>';
+                $mailMessage .= '<span style="color: purple;">';
+                $mailMessage .= 'Rachel and Jonas</span></p>';
 
                 $headers = "MIME-Version: 1.0\r\n";
                 $headers .= "Content-type: text/html; charset=utf-8\r\n"; 
@@ -206,7 +219,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
                 
                 if($mailSent){
-                    print "<p>A copy has been emailed to you for your records.</p>";
+                    print "<p>Confirmation of your survey completion has been emailed to you.</p>";
                     //print $mailMessage;
                 }
                 
