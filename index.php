@@ -21,34 +21,6 @@ include "top.php";
                     <p>
                         Scooby-Doo Where Are You? the initial iteration of the show, was launched in 1969 through Hanna Barbera productions. It was written by Joe Ruby and Ken Spears and aired on CBS. The original run of Scooby-Doo would go on for nearly a decade, ending in late 1978. Since then the show would be rebooted a numerous of times over the decade, with the most recent version of the show, loosely based around the character Velma, coming out earlier this year.
                     </p>
-                     <!-- 
-                    <table>
-                       <caption class="pa1">Garfield movies and TV shows</caption>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Release Year</th>
-                            <th scope="col">Rating</th>
-                        </tr>
-                        <?php  
-                            $sql ='SELECT fldName, fldRelease, fldRating FROM tblMovies';
-                            $statement = $pdo->prepare($sql);
-                            $statement->execute();
-
-                            $records = $statement->fetchAll();
-
-                            foreach ($records as $record){
-                                print'<tr>';
-                                print'<td>' . $record['fldName'] . '</td>';
-                                print'<td>' . $record['fldRelease'] . '</td>';
-                                print'<td>' . $record['fldRating'] . '%</td>';
-
-                            }
-                        ?>
-                         <tr>
-                            <td colspan="3" class="pa3"><cite>source:IMDB</cite></td>
-                        </tr>
-                    </table>
-                    -->
             </section>
             <section>
                 <h3>Why we picked Scooby-Doo</h3>
@@ -66,34 +38,24 @@ include "top.php";
                             <th>Ranking</th>
                             <th>Episode Name</th>
                             <th>rating</th>
+                        </tr>
+                            
+                            <?php
+                                $sql = 'SELECT fldRanking, fldEpisodeName, fldRating FROM
+                                tblEpisodes'; 
+                                $statement = $pdo->prepare($sql);
+                                $statement->execute();
 
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Jeepers, It's the Creeper</td>
-                            <td>84%</td>
+                                $records = $statement->fetchAll();
 
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>The Midnight Zone </td>
-                            <td>85%</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>A Night of Fright Is No Delight</td>
-                            <td>86%</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Wrath of the Krampus</td>
-                            <td>88%</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>All Fear the Freak</td>
-                            <td>92%</td>
-                        </tr>
+                                foreach($records as $record){
+                                    print'<tr>';
+                                    print'<td>' . $record['fldRanking'] . '</td>';
+                                    print'<td>' . $record['fldEpisodeName'] . '</td>';
+                                    print'<td>' . $record['fldRating'] . '</td>';
+                                    print'</tr>' . PHP_EOL;
+                                }
+                            ?>
                         <tr>
                             <td colspan=3><cite>source:IMDB</cite></td>
                         </tr>
