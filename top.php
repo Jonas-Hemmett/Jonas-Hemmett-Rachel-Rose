@@ -2,7 +2,7 @@
 
 $phpSelf = htmlspecialchars($_SERVER['PHP_SELF']);
 
-$path_parts = pathinfo($phpSelf);
+$pathParts = pathinfo($phpSelf);
 ?>
 
 <!DOCTYPE HTML>
@@ -16,7 +16,7 @@ $path_parts = pathinfo($phpSelf);
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 
         <link rel="stylesheet" 
         href="css/custom.css?version=<?php print time(); ?>" 
@@ -37,7 +37,7 @@ $path_parts = pathinfo($phpSelf);
     </head>
 <?php 
 //lab8start
-    print '<body class="grid-layout positioning"
+    print '<body=class"grid-layout positioning"
                 id="' . $path_parts['filename'] . '">';
     print '<!--####     Start Of Body   ####-->';
     include 'connect-DB.php';
