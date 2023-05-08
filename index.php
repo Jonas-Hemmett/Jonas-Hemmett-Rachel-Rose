@@ -88,7 +88,7 @@ include "top.php";
     <section>
         <h3>Disclaimer</h3>
         <p>
-            Copyright Disclaimer Under Section 107 of the Copyright Act 1976, permission is granted for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. All copyright belongs to their respective owners. Information accurate as of 5/8/23
+            Copyright Disclaimer Under Section 107 of the Copyright Act 1976, permission is granted for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. All copyright belongs to their respective owners. Information accurate as of 5/8/23.
         </p>
     </section>
         </main>
