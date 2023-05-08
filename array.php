@@ -1,7 +1,8 @@
 <?php 
 include "top.php";
 ?>
-<main>    <section class="flexWide flexList">
+<main>
+    <section class="flexWide flexList">
         <h3>Mystery Inc. Members</h3>
         <p>
             listed below is a  list of the five core Mystery Gang Members.
@@ -27,7 +28,7 @@ include "top.php";
                 <img src="resources/array/ShaggyRogers.png" alt="Shaggy Rogers">
             </figure>
             <p>
-                Shaggy is a hippy member of the Mystery Gang with a laid back personality. He frequently slips in the word "Like" in his speech and uses his catch phrase "Zoinks!" whenever he's surprised or scared. He known to frequently be hungry, is able to eat range quantities of food and can easily be persuaded by Scooby Snacks.
+                Shaggy is a hippy member of the Mystery Gang with a laid back personality. He frequently slips in the word "Like" in his speech and uses his catch phrase "Zoinks!" whenever he's surprised or scared. He known to frequently be hungry, is able to eat range quantities of food and can easily be persuaded by Scooby Snacks
             </p>
         </section>
 
@@ -60,7 +61,7 @@ include "top.php";
                 Velma Dinkley
             </h4>
             <figure>
-                <img src="resources/array/VelmaDinkley.png" alt="Velma Dinkley">
+                <img src="resources/array/VelmaDinkley.png" alt="Velma Dinkley"></a>
             </figure>
             <p>
                 Velma is known as the most intelligent member of the Mystery Gang.She usually wears a orange shirt and red skirt and is often the one to decipher the clues and solve the crimes.She is sharp-witted and sometimes sarcastic. She frequently loses her glasses  and immediately claims, "My glasses. I can't find my glasses" or "I can't see without my glasses," before crawling around on the floor until she finds them.   
