@@ -207,10 +207,8 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                 $subject = 'Scooby-Doo Survey';
 
                 $mailMessage = '<p style="font: 14pt serif;">Thanks for taking ';
-                $mailMessage .= 'our survey! We are excited to hear what you think about Scooby Doo.</p>';
-                $mailMessage .= '<span style="font: 14pt serif;">';
-                $mailMessage .= 'sincerely, </span></p>';
-                $mailMessage .= '<span style="color: purple; font: 14pt serif;">';
+                $mailMessage .= 'our survey! We are excited to hear what you think about Scooby Doo</p>';
+                $mailMessage .= '<span style="color: purple;">';
                 $mailMessage .= 'Rachel and Jonas</span></p>';
 
                 $headers = "MIME-Version: 1.0\r\n";
@@ -252,9 +250,9 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         print $mailMessage;
 
         //delete when have final proj
-        //print '<p>Post Array:</p><pre>';
-        //print_r($_POST);
-        //print'</pre>';
+        print '<p>Post Array:</p><pre>';
+        print_r($_POST);
+        print'</pre>';
         ?>
 
     <!--php -->
@@ -368,7 +366,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                 <legend><strong>Comments</strong></legend>
                 <p class="lstplayblock">
-                    <label for="txtComment">No punctuation exept peroids can be used.</label>
+                    <label for="txtComment">Comments</label>
                     <textarea name="txtComment" id="txtComment" rows="2" cols="20"><?php print $comment ?></textarea>
                 </p>
             </fieldset>
