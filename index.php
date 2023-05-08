@@ -86,11 +86,26 @@ include "top.php";
     </section>
 
     <section>
+        <h3>Showcase Video</h3>
+        <p>Coming Soon.</p>
+        <!--
+        <p>
+            below is a video going over our website.
+        </p>  
+        <video controls width=80%>
+            <source src="resources/videos/test.mp4" type="video/mp4">
+        <video>
+                            -->
+    </section>
+        
+
+    <section>
         <h3>Disclaimer</h3>
         <p>
             Copyright Disclaimer Under Section 107 of the Copyright Act 1976, permission is granted for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. All copyright belongs to their respective owners. Information accurate as of 5/8/23.
         </p>
     </section>
+
         </main>
 <?php 
 include "footer.php";
