@@ -39,15 +39,19 @@ include 'top.php'
         fldRating VARCHAR(40)
     );
     </pre>
-    <pre> 
-    INSERT INTO tblScoobyDooSurvery 
-    (pmkScoobyDooSurveyId, fldFirstName, fldLastName, fldEmail, fldGender, fldDrCoffin, fldCaptainSkunkbeard, 
-        fldtheMysteryMachine, fldProfessorPericles, fldTheBlackKnight, fldMostEvil, fldMysteryGangMember, fldComments)
-        VALUES
-        (1,'Rachel', 'Rose', 'rrose1@uvm.edu','Female', 1, 1, 1, 1, 1,'The Ghost of Dr. Coffin', 'Scooby', 'Slayyyy')
+    <pre>    
+    INSERT INTO tblEpisodes(pmkSEpisodesId, fldRanking, fldEpisodeName, fldRating) 
+        VALUES ('5','Jeepers, It\'s the Creeper', '84%'),('4','The Midnight Zone','85%'),
+        ('3','A Night of Fright Is No Delight','86%'),('2','Wrath of the Krampus','88%'),('1','All Fear the Freak','92%');
     </pre>
 
-<?php  
+    <h2>Select Records</h2>
+    <pre>
+        SELECT pmkSEpisodesId, fldRanking, fldEpisodeName, fldRating FROM tblEpisodes 
+    </pre>
+
+/* 
+<?php 
 /*  
 
         //fix when we fix the charcter tables
@@ -75,6 +79,7 @@ include 'top.php'
 </pre>
 */
 ?>
+
 
 </main>
 <?php include 'footer.php'; ?>
