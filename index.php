@@ -62,14 +62,35 @@ include "top.php";
                     </table>
             </section>
             <section>
-                <h3>Fun Facts</h3>
-                    <p>
-                        <ul>
-                            <li>
-                            
-                            </li>
-                    </p>
-            </section>
+        <h3>Fun Facts</h3>
+        <p>
+            Listed Below are some of out favorite fun facts about the Scooby-Doo Franchise
+        </p>
+        <ul>
+            <li>
+                Shaggy's real name is Norville.
+            </li>
+            <li>
+                Scooby has two twin siblings.
+            </li>
+            <li>
+                Every character exept Fred has a unique catchphrase.
+            </li>
+            <li>
+                The gang has teamed up with Batman on multiple occasions.
+            </li>
+            <li>
+                Over a dozen versions of the show have been made.
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Disclaimer</h3>
+        <p>
+            Copyright Disclaimer Under Section 107 of the Copyright Act 1976, permission is granted for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. All copyright belongs to their respective owners. Information accurate as of 5/8/23
+        </p>
+    </section>
         </main>
 <?php 
 include "footer.php";
