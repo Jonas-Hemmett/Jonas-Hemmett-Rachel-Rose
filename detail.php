@@ -28,7 +28,7 @@ include "top.php";
                 <img src="resources/detail/CaptainSkunkBeard.png" alt="Captain Skunkbeard" class="centerImg">
             </figure>
             <p>
-                Captain Skunkbeard is a supposed ghost pirate. He has green skin, red clothes, and a big gray beard. He was extremely terrifying. His true identity is Biff Wellington, an eccentric billionaire. Biff Wellington was trying to get Heaven's Light, a meteor in the Bermuda triangle in hopes of getting its supposed time traveling abilities. He disguised himself as Captain Skunkbeard as an attempt to get closer to the center of the triangle.
+                Captain Skunkbeard is a supposed ghost pirate. He has green skin, red clothes, and a big gray beard. He was extremely terrifying. His true identity is Biff Wellington, an eccentric billionaire. Biff Wellington was trying to get Heaven's Light, a meteor in the Bermuda triangle in hopes of getting its supposed time traveling abilities. He disguised himself as Captain Skunkbeard as an attempt to get closer to the center of the triangle 
             </p>
         </section>
 
@@ -52,7 +52,7 @@ include "top.php";
                 <img src="resources/detail/ProfessorPericles.png" alt="Professor Pericles" class="centerImg">
             </figure>
             <p>
-                Professor Pericles was the mascot for the original Mystery Inc. He is a small blue parrot with human-like intelligence similar to Scooby-Doo. Despite being part of the Mystery Inc. He betrayed them in a vain attempt to seize power which ended up putting him in the Crystal Cove Animal Asylum for the Criminally Insane. He later would escape and battle the current Mystery Inc and die after failing to overpower them. 
+            Professor Pericles was the mascot for the original Mystery Inc. He is a small blue parrot with human-like intelligence similar to Scooby-Doo. Despite being part of the Mystery Inc. He betrayed them in a vain attempt to seize power which ended up putting him in the Crystal Cove Animal Asylum for the Criminally Insane. He later would escape and battle the current Mystery Inc and die after failing to overpower them. 
             </p>
         </section>
 
