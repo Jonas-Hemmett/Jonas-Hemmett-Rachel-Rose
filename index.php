@@ -88,14 +88,12 @@ include "top.php";
     <section>
         <h3>Showcase Video</h3>
         <p>Coming Soon.</p>
-        <!--
+        
         <p>
             below is a video going over our website.
         </p>  
-        <video controls width=80%>
-            <source src="resources/videos/test.mp4" type="video/mp4">
-        <video>
-                            -->
+        <iframe class="iframe" src="https://www.youtube.com/embed/d9T1H5A_bKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    
     </section>
         
 
