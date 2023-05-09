@@ -250,9 +250,9 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         print $mailMessage;
 
         //delete when have final proj
-        print '<p>Post Array:</p><pre>';
-        print_r($_POST);
-        print'</pre>';
+        //print '<p>Post Array:</p><pre>';
+        //print_r($_POST);
+        //print'</pre>';
         ?>
 
     <!--php -->
