@@ -87,8 +87,6 @@ include "top.php";
 
     <section>
         <h3>Showcase Video</h3>
-        <p>Coming Soon.</p>
-        
         <p>
             below is a video going over our website.
         </p>  
