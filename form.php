@@ -208,7 +208,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
 
                 $mailMessage = '<p style="font: 14pt serif;">Thanks for taking ';
                 $mailMessage .= 'our survey! We are excited to hear what you think about Scooby Doo</p>';
-                $mailMessage .= '<span style="color: purple;">';
+                $mailMessage .= '<span style="font: 14pt serif;">';
                 $mailMessage .= 'Rachel and Jonas</span></p>';
 
                 $headers = "MIME-Version: 1.0\r\n";
@@ -256,7 +256,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
         ?>
 
     <!--php -->
-    </section class="flexWide">
+    </section>
     <section>
         <form action="#" method="POST">
             <fieldset class="lstplayblock">
@@ -313,11 +313,11 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
                     <label for="chkProfessorPericles">Professor Pericles</label>
                 </p>
                 <p>
-                    <input type="checkbox" name="chkTheBlackKnight" id="chkThe Black Knight" value="1" <?php if($theBlackKnight) print 'checked';?>>
+                    <input type="checkbox" name="chkTheBlackKnight" id="chkTheBlackKnight" value="1" <?php if($theBlackKnight) print 'checked';?>>
                     <label for="chkTheBlackKnight">The Black Knight</label>
                 </p>
                 <p class="lstplayblock">
-                    <label for="mostEvil">Most Evil Villian? <!--<a href=detail.php>list for refrence</a></label>-->
+                    <label for="mostEvil">Most Evil Villian?</label>
                     <select id="mostEvil" name="mostEvil">                      
                         <option
                             <?php if($mostEvil == "The Ghost of Dr. Coffin") print 'selected'; ?> value="The Ghost of Dr. Coffin">The Ghost of Dr. Coffin
@@ -341,7 +341,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST'){
             <fieldset>
                     <legend><strong>Select your favorite Mystery Gang Member</strong></legend>
                     <p class="lstplayblock">
-                    <label for="mysteryGangMember">Favorite Mystery Gang Member? 
+                    <label for="mysteryGangMember">Favorite Mystery Gang Member?</label> 
                     <select id="mysteryGangMember" name="mysteryGangMember">
                         
                         <option
