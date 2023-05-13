@@ -102,7 +102,7 @@ h1 {
     transform: scale(1.05);
 }
 
-p, h4, th, td, pre {
+p, h4, th, td, pre, li, ol, ul {
     text-align: justify;
     font-family: Arial;
     font-size: var(--fontSize)
@@ -319,7 +319,15 @@ h4 {
     display:block;
 }
 
-p, pre, table, ul, li {
+p, pre, table, ul, li, ol {
     padding-left: 2%;
     padding-right: 2%;
+}
+
+li:nth-child(even), tr:nth-child(even) {
+    background-color: rgba(200,200,200,0.5);
+}
+
+li:nth-child(odd), tr:nth-child(odd) {
+    background-color: rgba(220, 220, 220,0.5);
 }
